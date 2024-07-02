@@ -25,6 +25,11 @@ python:
       path: .
     - requirements: docs/requirements.txt
 
+git:
+  clone:
+    depth: 50
+    branch: main
+
 # Optionally define the build jobs if you have multiple environments or configurations
 # jobs:
 #   include:
