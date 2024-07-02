@@ -1,5 +1,8 @@
-pydata-sphinx-theme
-numpydoc
-sphinx-design
-sphinx-copybutton
-quakepro
+h5py
+matplotlib
+numpy
+obspy
+pandas
+scipy
+typing
+tqdm
