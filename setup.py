@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as fh:
     long_description = fh.read()
 
 config = {
-    'description': 'An open-source Python toolkit offering a collection of efficient, easy-to-use functions for seismic data analysis.',
+    'description': 'An open-source Python tool for downading and processing seismic waveforms.',
     'author': 'Gabriele Paoletti',
     'url': 'https://github.com/gabrielepaoletti/quakepro',
     'download_url': 'https://github.com/gabrielepaoletti/quakepro',
