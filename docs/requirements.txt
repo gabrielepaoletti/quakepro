@@ -1,8 +1,5 @@
-h5py
-matplotlib
-numpy
-obspy
-pandas
-scipy
-typing
-tqdm
+pydata-sphinx-theme
+numpydoc
+sphinx-design
+sphinx-copybutton
+seismutils
