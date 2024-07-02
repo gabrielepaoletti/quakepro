@@ -1,0 +1,8 @@
+h5py
+matplotlib
+numpy
+obspy
+pandas
+scipy
+typing
+tqdm

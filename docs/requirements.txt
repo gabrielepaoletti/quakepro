@@ -1,0 +1,5 @@
+pydata-sphinx-theme
+numpydoc
+sphinx-design
+sphinx-copybutton
+quakepro
