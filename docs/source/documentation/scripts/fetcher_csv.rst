@@ -9,7 +9,7 @@ Download waveforms from CSV
         For the script to work properly, it is important that the CSV input columns are formatted as explained in the `tutorial <https://quakepro.readthedocs.io/en/latest/user_guide/tutorials.html>`_.
 
     :Subcommands:
-        **-p, \--provider** : *str*
+        **-p, \--client** : *str*
             Client code for the FDSN data service.
 
         **-n, \--network** : *str*
