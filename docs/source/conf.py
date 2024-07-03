@@ -40,6 +40,9 @@ extensions = [
     'sphinxarg.ext'
 ]
 
+# Enable standard domain
+primary_domain = 'std'
+
 # The default setting is 'signature', but you can change it to 'none'
 # to suppress the type hints in the documentation.
 autodoc_typehints = 'none'
