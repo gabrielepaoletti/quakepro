@@ -3,7 +3,7 @@ Download waveforms from CSV
 
 .. option:: $ qpf-csv <subcommand> [options]
 
-    Download seismic waveforms using FDSN web services.
+    Download seismic waveforms using FDSN web services from a CSV earthquake catalog.
 
     :Subcommands:
         **-p, --provider** : *str*
@@ -11,3 +11,36 @@ Download waveforms from CSV
 
         **-n, --network** : *str*
             Network code to identify the seismic network.
+        
+        **-s, --station** : *str*
+            Station code to retrieve data for.
+
+        **-l, --location** : *str*
+            Location code within the station.
+
+        **-c, --channel** : *str*
+            Channel code(s) indicating types of data.
+
+        **-m, --model** : *str*
+            Earth velocity model for travel time calculations.
+
+        **--time_before_p** : *str*
+            Time in seconds before P-wave arrival to start the trace.
+
+        **--time_after_p** : *str*
+            Time in seconds after P-wave arrival to end the trace.
+
+        **--catalog_path** : *str*
+            Path to the earthquake catalog CSV file.
+        
+        **--detrend** : *str, optional*
+            Method used for detrending data. Default is ``linear``.
+        
+        **--resample** : *float, optional*
+            New sampling rate in Hz to resample the waveform data. Default is ``None``.
+
+        **--remove_response** : *str, optional*
+            Remove the instrument response and convert to the specified output. Default is ``None``.
+        
+
+
