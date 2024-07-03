@@ -65,13 +65,13 @@ class _PlotConfig:
         Parameters
         ----------
         save_name : str, optional
-            The base name used for saving figures when `save_figure` is True. It serves as the prefix for file names.
+            The base name used for saving figures when ``save_figure`` is True. It serves as the prefix for file names.
 
         save_extension : str, optional
-            The file extension to use when saving figures, such as 'jpg', 'png', etc... The default extension is 'jpg'.
+            The file extension to use when saving figures, such as ``'jpg'``, ``'png'``, etc... The default extension is ``'jpg'``.
 
         directory : str, optional
-            The directory where the figure will be saved (default is './swf_figures').
+            The directory where the figure will be saved (default is ``'./swf_figures'``).
 
         Returns
         -------
@@ -109,16 +109,16 @@ class Plotter(_PlotConfig):
         Parameters
         ----------
         slice_obj : Union[slice, int, str], optional
-            The slice object or 'random' to select a waveform. Default is 'random'.
+            The slice object or ``'random'`` to select a waveform. Default is ``'random'``.
 
         save_figure : bool, optional
-            If True, save the figure. Default is False.
+            If ``True``, save the figure. Default is ``False``.
 
         save_name : str, optional
-            The name to save the figure. Default is 'fourier_transform'.
+            The name to save the figure. Default is ``'waveform'``.
 
         save_extension : str, optional
-            The file extension to save the figure. Default is 'jpg'.
+            The file extension to save the figure. Default is ``'jpg'``.
 
         Returns
         -------
@@ -127,7 +127,7 @@ class Plotter(_PlotConfig):
         Raises
         ------
         ValueError
-            If `slice_obj` is not an integer, a slice object, or the string 'random'.
+            If ``slice_obj`` is not an integer, a slice object, or the string ``'random'``.
         """
         if slice_obj == 'random':
             index = random.randint(0, len(self.attr['trace_name']) - 1)
@@ -166,22 +166,22 @@ class Plotter(_PlotConfig):
         Parameters
         ----------
         slice_obj : Union[slice, int, str], optional
-            The slice object or 'random' to select a waveform. Default is 'random'.
+            The slice object or ``'random'`` to select a waveform. Default is ``'random'``.
 
         log_scale : bool, optional
-            If True, plot on a logarithmic scale. Default is True.
+            If ``True``, plot on a logarithmic scale. Default is ``True``.
 
         plot_waveform : bool, optional
-            If True, plot the waveform along with the Fourier Transform. Default is True.
+            If ``True``, plot the waveform along with the Fourier Transform. Default is ``True``.
 
         save_figure : bool, optional
-            If True, save the figure. Default is False.
+            If ``True``, save the figure. Default is ``False``.
 
         save_name : str, optional
-            The name to save the figure. Default is 'fourier_transform'.
+            The name to save the figure. Default is ``'fourier_transform'``.
 
         save_extension : str, optional
-            The file extension to save the figure. Default is 'jpg'.
+            The file extension to save the figure. Default is ``'jpg'``.
 
         Returns
         -------
@@ -190,7 +190,7 @@ class Plotter(_PlotConfig):
         Raises
         ------
         ValueError
-            If `slice_obj` is not an integer, a slice object, or the string 'random'.
+            If ``slice_obj`` is not an integer, a slice object, or the string ``'random'``.
         """
         if slice_obj == 'random':
             index = random.randint(0, len(self.attr['trace_name']) - 1)
@@ -256,37 +256,37 @@ class Plotter(_PlotConfig):
         Parameters
         ----------
         slice_obj : Union[slice, int, str], optional
-            The slice object or 'random' to select a waveform. Default is 'random'.
+            The slice object or 'random' to select a waveform. Default is ``'random'``.
 
         nperseg : int, optional
-            Length of each segment for STFT. Default is 128.
+            Length of each segment for STFT. Default is ``128``.
 
         noverlap : int, optional
-            Number of points to overlap between segments. Default is None.
+            Number of points to overlap between segments. Default is ``None``.
 
         log_scale : bool, optional
-            If True, plot on a logarithmic scale. Default is False.
+            If ``True``, plot on a logarithmic scale. Default is ``False``.
 
         zero_padding_factor : int, optional
-            Factor by which to zero-pad the FFT. Default is 8.
+            Factor by which to zero-pad the FFT. Default is ``8``.
 
         plot_waveform : bool, optional
-            If True, plot the waveform along with the spectrogram. Default is True.
+            If ``True``, plot the waveform along with the spectrogram. Default is ``True``.
 
         colorbar : bool, optional
-            If True, add a colorbar to the spectrogram. Default is False.
+            If ``True``, add a colorbar to the spectrogram. Default is ``False``.
 
         cmap : str, optional
-            Colormap to use for the spectrogram. Default is 'jet'.
+            Colormap to use for the spectrogram. Default is ``'jet'``.
 
         save_figure : bool, optional
-            If True, save the figure. Default is False.
+            If ``True``, save the figure. Default is ``False``.
 
         save_name : str, optional
-            The name to save the figure. Default is 'spectrogram'.
+            The name to save the figure. Default is ``'spectrogram'``.
 
         save_extension : str, optional
-            The file extension to save the figure. Default is 'jpg'.
+            The file extension to save the figure. Default is ``'jpg'``.
 
         Returns
         -------
@@ -295,7 +295,7 @@ class Plotter(_PlotConfig):
         Raises
         ------
         ValueError
-            If `slice_obj` is not an integer, a slice object, or the string 'random'.
+            If ``slice_obj`` is not an integer, a slice object, or the string ``'random'``.
         """
         if slice_obj == 'random':
             index = random.randint(0, len(self.attr['trace_name']) - 1)

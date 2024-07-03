@@ -44,6 +44,9 @@ Download waveforms from CSV
 
         **\--remove_response** : *str, optional*
             Remove the instrument response and convert to the specified output. Default is ``None``.
+    
+    :Options:
+        Each subcommand has its own set of options. Use ``qpf-csv <subcommand> --help`` to see which of the following options apply to any of the subcommands listed above.
         
 
 

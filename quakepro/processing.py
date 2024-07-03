@@ -94,16 +94,16 @@ class Processor:
         Parameters
         ----------
         filter_type : str
-            The type of filter to apply (e.g., 'lowpass', 'highpass', 'bandpass').
+            The type of filter to apply.
 
         cutoff : list
             The cutoff frequency or frequencies.
 
         order : int, optional
-            The order of the filter. Default is 5.
+            The order of the filter. Default is ``5``.
             
         zero_phase : bool, optional
-            If True, apply zero-phase filtering. Default is True.
+            If ``True``, apply zero-phase filtering. Default is ``True``.
 
         Returns
         -------
