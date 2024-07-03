@@ -47,8 +47,10 @@ class _Station:
         ----------
         client : str
             The identifier for the seismic data service client.
+
         network : str
             The seismic network code.
+
         name : str
             The name of the station within the network.
 
@@ -84,26 +86,37 @@ class WaveformFetcher:
         ----------
         client : str
             The identifier for the seismic data service client.
+
         network : str
             The network code to identify the seismic network.
+
         station : str
             The station code to retrieve data for.
+
         location : str
             The location code within the station.
+
         channel : str
             The channel code(s) indicating types of data (e.g., 'HH*').
+
         catalog_path : str
             Path to the catalog file containing earthquake events data.
+
         model : str
             The earth model to use for travel time calculations.
+
         time_before_p : float
             Time in seconds before the predicted P-wave arrival to start the trace.
+
         time_after_p : float
             Time in seconds after the predicted P-wave arrival to end the trace.
+
         detrend : str, optional
             Method used for detrending data.
+
         resample : float, optional
             New sampling rate to resample the waveform data.
+
         remove_risponse : str, optional
             Whether to remove the instrument response to the waveform data (e.g. 'VEL', 'ACC' or 'DISP').
 
@@ -263,8 +276,10 @@ class WaveformFetcher:
         ----------
         file : h5py.File
             The HDF5 file object in which the dataset will be created.
+
         event : pd.Series
             A pandas Series object containing details of the seismic event.
+
         waveform : np.ndarray
             An array of waveform data associated with the seismic event.
 
@@ -287,6 +302,7 @@ class WaveformFetcher:
         ----------
         event : pd.Series
             A series containing the event details.
+            
         dataset : h5py.Dataset
             The HDF5 dataset to retrieve the name of the waveform.
 

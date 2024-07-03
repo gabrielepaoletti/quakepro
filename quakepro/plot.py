@@ -113,16 +113,24 @@ class Plotter(_PlotConfig):
         ----------
         slice_obj : Union[slice, int, str], optional
             The slice object or 'random' to select a waveform. Default is 'random'.
+
         save_figure : bool, optional
             If True, save the figure. Default is False.
+
         save_name : str, optional
             The name to save the figure. Default is 'fourier_transform'.
+
         save_extension : str, optional
             The file extension to save the figure. Default is 'jpg'.
 
         Returns
         -------
         None
+
+        Raises
+        ------
+        ValueError
+            If `slice_obj` is not an integer, a slice object, or the string 'random'.
         """
         if slice_obj == 'random':
             index = random.randint(0, len(self.attr['trace_name']) - 1)
@@ -162,20 +170,30 @@ class Plotter(_PlotConfig):
         ----------
         slice_obj : Union[slice, int, str], optional
             The slice object or 'random' to select a waveform. Default is 'random'.
+
         log_scale : bool, optional
             If True, plot on a logarithmic scale. Default is True.
+
         plot_waveform : bool, optional
             If True, plot the waveform along with the Fourier Transform. Default is True.
+
         save_figure : bool, optional
             If True, save the figure. Default is False.
+
         save_name : str, optional
             The name to save the figure. Default is 'fourier_transform'.
+
         save_extension : str, optional
             The file extension to save the figure. Default is 'jpg'.
 
         Returns
         -------
         None
+
+        Raises
+        ------
+        ValueError
+            If `slice_obj` is not an integer, a slice object, or the string 'random'.
         """
         if slice_obj == 'random':
             index = random.randint(0, len(self.attr['trace_name']) - 1)
@@ -242,30 +260,45 @@ class Plotter(_PlotConfig):
         ----------
         slice_obj : Union[slice, int, str], optional
             The slice object or 'random' to select a waveform. Default is 'random'.
+
         nperseg : int, optional
             Length of each segment for STFT. Default is 128.
+
         noverlap : int, optional
             Number of points to overlap between segments. Default is None.
+
         log_scale : bool, optional
             If True, plot on a logarithmic scale. Default is False.
+
         zero_padding_factor : int, optional
             Factor by which to zero-pad the FFT. Default is 8.
+
         plot_waveform : bool, optional
             If True, plot the waveform along with the spectrogram. Default is True.
+
         colorbar : bool, optional
             If True, add a colorbar to the spectrogram. Default is False.
+
         cmap : str, optional
             Colormap to use for the spectrogram. Default is 'jet'.
+
         save_figure : bool, optional
             If True, save the figure. Default is False.
+
         save_name : str, optional
             The name to save the figure. Default is 'spectrogram'.
+
         save_extension : str, optional
             The file extension to save the figure. Default is 'jpg'.
-        
+
         Returns
         -------
         None
+
+        Raises
+        ------
+        ValueError
+            If `slice_obj` is not an integer, a slice object, or the string 'random'.
         """
         if slice_obj == 'random':
             index = random.randint(0, len(self.attr['trace_name']) - 1)
