@@ -92,11 +92,11 @@ The script will generate the following output files:
     - `rec_longitude_deg`: Longitude of the receiver.
     - `rec_sampling_rate_hz`: Sampling rate of the receiver in Hz.
     - `src_id`: Unique identifier of the earthquake event.
-    - `src_depth_km`: Depth of the earthquake event in kilometers.
+    - `src_origin_time`: Origin time of the earthquake event.
     - `src_latitude_deg`: Latitude of the earthquake event.
     - `src_longitude_deg`: Longitude of the earthquake event.
+    - `src_depth_km`: Depth of the earthquake event in kilometers.
     - `src_magnitude`: Magnitude of the earthquake event.
-    - `src_origin_time`: Origin time of the earthquake event.
     - `p_travel_sec`: P-wave travel time in seconds.
 
 ## 🤝 Contributing

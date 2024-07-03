@@ -321,11 +321,11 @@ class WaveformFetcher:
                 'rec_elevation_m': self.station.elevation,
                 'rec_sampling_rate_hz': self.station.sampling_rate,
                 'src_id': event.id,
-                'src_depth_km': event.depth,
+                'src_origin_time': event.time,
                 'src_latitude_deg': event.lon,
                 'src_longitude_deg': event.lat,
+                'src_depth_km': event.depth,
                 'src_magnitude': event.magnitude,
-                'src_origin_time': event.time,
                 'p_travel_sec': event.p_travel_time_s
         }
         self.__attr_list.append(event_attributes)
