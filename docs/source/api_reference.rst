@@ -4,14 +4,14 @@ API Reference
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: quakepro.processing
+   :caption: Signal Processing
 
-   documentation/processing
+   `filter() <https://quakepro.readthedocs.io/en/latest/documentation/processing.html#quakepro.processing.Plotter.filter>`_
 
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: quakepro.plot
+   :caption: Visualization
 
    documentation/plot
 
