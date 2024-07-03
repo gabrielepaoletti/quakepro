@@ -10,7 +10,7 @@ Documentation
 
 **Version:** v0.1.0
 
-QUAKEPRO id an user-friendly seismology tool designed to automate the process of downloading seismic waveforms from CSV earthquake catalogs. This project aims to facilitate the retrieval of seismic data for researchers and enthusiasts in the field of seismology.
+QUAKEPRO is an user-friendly seismology tool designed to automate the process of downloading seismic waveforms from CSV earthquake catalogs. This project aims to facilitate the retrieval of seismic data for researchers and enthusiasts in the field of seismology.
 
 .. grid:: 1 1 2 2
    :padding: 0 2 3 5
