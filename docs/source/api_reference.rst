@@ -15,7 +15,7 @@ API Reference
 
    documentation/plot
 
-This reference manual offers detailed explanations of the functions, modules, and objects contained within QUAKEPRO, outlining their purposes and functionalities. To learn how to apply QUAKEPRO, please refer to the `tutorial page <https://quakepro.readthedocs.io/en/latest/user_guide/tutorials.html>`_.
+This reference manual offers detailed explanations of the functions, modules, and objects contained within QUAKEPRO, outlining their purposes and functionalities. To learn how to apply QUAKEPRO, please refer to the `tutorial page <https://quakepro.readthedocs.io/en/latest/user_guide/tutorial.html>`_.
 
 Module structure
 ----------------
