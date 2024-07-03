@@ -3,3 +3,4 @@ numpydoc
 sphinx-design
 sphinx-copybutton
 sphinx-tabs
+sphinxcontrib-autoprogram

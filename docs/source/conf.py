@@ -35,7 +35,8 @@ extensions = [
     'numpydoc',
     'sphinx_design',
     'sphinx_copybutton',
-    'sphinx_tabs.tabs'
+    'sphinx_tabs.tabs',
+    'sphinxcontrib.autoprogram'
 ]
 
 # The default setting is 'signature', but you can change it to 'none'
