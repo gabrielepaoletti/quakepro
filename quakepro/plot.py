@@ -161,7 +161,7 @@ class Plotter(_PlotConfig):
 
     def plot_fourier_transform(self, slice_obj: Union[slice, int, str]='random', log_scale: bool=True, plot_waveform: bool=True, save_figure: bool=False, save_name: str='fourier_transform', save_extension: str='jpg') -> None:
         """
-        Plot the Fourier Transform of a selected waveform in the HDF5 file.
+        Plot the fourier transform of a selected waveform in the HDF5 file.
 
         Parameters
         ----------
@@ -251,7 +251,7 @@ class Plotter(_PlotConfig):
     
     def plot_spectrogram(self, slice_obj: Union[slice, int, str] = 'random', nperseg: int = 128, noverlap: int = None, log_scale: bool = False, zero_padding_factor: int = 8, plot_waveform: bool = True, colorbar: bool = False, cmap: str = 'jet', save_figure: bool = False, save_name: str = 'spectrogram', save_extension: str = 'jpg') -> None:
         """
-        Plot the Spectrogram of a selected waveform in the HDF5 file.
+        Plot the spectrogram of a selected waveform in the HDF5 file.
 
         Parameters
         ----------
