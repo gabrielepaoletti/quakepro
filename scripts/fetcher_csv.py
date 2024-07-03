@@ -1,14 +1,4 @@
 """
-This script is designed to automate the process of downloading seismic waveforms from a CSV earthquake catalog.
-
-Usage:
-To run the scipt to download data from a certain gatalog, use the command line to navigate to the script's directory and execute it as follows:
-
-$ qpf-csv -p "INGV" -n "IV" -s "MMO1" -l "*" -c "EH*" -m "iasp91" --time_before_p 5 --time_after_p 15 --catalog_path "path_to_your_catalog.csv"
-
-Note:
-The script requires an internet connection to access the online data repositories.
-
 @author: Gabriele Paoletti
 @e-mail: gabriele.paoletti@uniroma1.it
 """
