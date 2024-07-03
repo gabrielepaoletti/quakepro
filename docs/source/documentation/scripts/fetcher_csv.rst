@@ -1,11 +1,11 @@
 Download waveforms from CSV
 ===========================
 
-.. option:: qpf-csv
+.. option:: $ qpf-csv <subcommand> [options]
 
     Download seismic waveforms using FDSN web services.
 
-    :Parameters:
+    :Subcommands:
         **-p, --provider** : *str*
             Client code for the FDSN data service.
 
