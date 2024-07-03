@@ -29,8 +29,8 @@ Modules
 Executable scripts
 ------------------
 
-.. card:: :material-outlined:`image;1.7em` Download waveforms from CSV
+.. card:: :material-outlined:`download;1.7em` Download waveforms from CSV
    :link: documentation/scripts/fetcher_csv
    :link-type: doc
 
-   Coming soon...
+   Script for downloading seismic waveforms from CSV earthquake catalogs.
