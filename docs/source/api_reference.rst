@@ -24,10 +24,10 @@ Module structure
    :link: documentation/processing
    :link-type: doc
 
-    Manipulate waveform data to enhance seismic signal analysis and interpretation.
+   Manipulate waveform data to enhance seismic signal analysis and interpretation.
 
 .. card:: :material-outlined:`image;1.7em` Visualization
-   :link: documentation/geo/seismic_visualization
+   :link: documentation/plot
    :link-type: doc
 
    Offer tools for the effective visualization of seismic waveforms.

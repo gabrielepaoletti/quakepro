@@ -1,4 +1,5 @@
 Visualization
 ======================================
 
-.. autoclass:: quakepro.plot
+.. autoclass:: quakepro.plot.Plotter
+    :members:

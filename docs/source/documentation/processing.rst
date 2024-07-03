@@ -1,4 +1,5 @@
 Signal Processing
 ======================================
 
-.. autoclass:: quakepro.processing
+.. autoclass:: quakepro.processing.Processor
+    :members:
