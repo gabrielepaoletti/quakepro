@@ -28,9 +28,3 @@ Modules
 
 Executable scripts
 ------------------
-
-.. card:: :material-regular:`graphic_eq;1.7em` Fetch waveforms from CSV
-   :link: documentation/scripts/fetcher_csv
-   :link-type: doc
-
-   Manipulate waveform data to enhance seismic signal analysis and interpretation.
