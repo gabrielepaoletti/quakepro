@@ -86,6 +86,21 @@ class _PlotConfig:
 
 class Plotter(_PlotConfig):
     def __init__(self, waveforms: h5py.File, attributes: pd.DataFrame) -> None:
+        """
+        Initialize the Plotter instance with waveform data and attributes.
+
+        Parameters
+        ----------
+        waveforms : h5py.File
+            An HDF5 file object containing waveform data.
+        
+        attributes : pd.DataFrame
+            A pandas DataFrame containing attributes related to the waveforms.
+
+        Returns
+        -------
+        None
+        """
         super().__init__()
         self.wavs = waveforms
         self.attr = attributes
