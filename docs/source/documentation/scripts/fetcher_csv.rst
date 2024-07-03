@@ -7,6 +7,6 @@ Documentation
 
     Download seismic waveforms using FDSN web services.
 
-    .. option:: -p, --provider
+.. option:: -p, --provider
 
-        Client code for the FDSN data service.
+    Client code for the FDSN data service.
