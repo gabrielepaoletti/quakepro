@@ -29,5 +29,10 @@ Modules
 Executable scripts
 ------------------
 
-.. autoprogram:: scripts.fetcher_csv_args:parser
-   :prog: qpf-csv
+.. program:: qpf-csv
+
+      Download seismic waveforms using FDSN web services.
+
+      .. option:: -p, -.provider
+
+         Client code for the FDSN data service.
