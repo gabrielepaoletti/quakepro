@@ -28,3 +28,6 @@ Modules
 
 Executable scripts
 ------------------
+
+.. autoprogram:: scripts.fetcher_csv_args:parser
+   :prog: qpf-csv
