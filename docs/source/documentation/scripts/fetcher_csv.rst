@@ -1,12 +1,12 @@
 Download waveforms from CSV
 ===========================
 
-Documentation
-
-.. program:: qpf-csv
+.. option:: qpf-csv
 
     Download seismic waveforms using FDSN web services.
 
-.. option:: -p, --provider
+    Parameters
+    ----------
 
-    Client code for the FDSN data service.
+    :parameter: slice_obj : Union[slice, int, str], optional
+        The slice object or 'random' to select a waveform. Default is 'random'
