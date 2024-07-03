@@ -5,11 +5,9 @@ Download waveforms from CSV
 
     Download seismic waveforms using FDSN web services.
 
-    :Parameter
+    :Parameters:
+        **-p, --provider** : *str*
+            Client code for the FDSN data service.
 
-    :Parameter:
-        **slice_obj** : *str*
-            The slice object or 'random' to select a waveform. Default is 'random' 
-
-    :parameter slice_obj: Union[slice, int, str], optional
-        The slice object or 'random' to select a waveform. Default is 'random'
+        **-n, --network** : *str*
+            Network code to identify the seismic network.
