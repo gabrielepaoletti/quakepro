@@ -64,9 +64,6 @@ class _PlotConfig:
 
         Parameters
         ----------
-        fig : matplotlib.figure.Figure
-            The figure object to save.
-
         save_name : str, optional
             The base name used for saving figures when `save_figure` is True. It serves as the prefix for file names.
 
