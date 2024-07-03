@@ -84,18 +84,19 @@ The script will generate the following output files:
 2. **CSV attributes file**: Contains metadata for each waveform with the following columns:
     - `trace_name`: Name of the trace.
     - `trace_start_time`: Start time of the trace.
-    - `network_code`: Code of the seismic network.
-    - `receiver_name`: Name of the receiver (station).
-    - `receiver_type`: Type of the receiver.
-    - `receiver_elevation_m`: Elevation of the receiver in meters.
-    - `receiver_latitude`: Latitude of the receiver.
-    - `receiver_longitude`: Longitude of the receiver.
-    - `source_id`: Unique identifier of the earthquake event.
-    - `source_depth_km`: Depth of the earthquake event in kilometers.
-    - `source_latitude`: Latitude of the earthquake event.
-    - `source_longitude`: Longitude of the earthquake event.
-    - `source_magnitude`: Magnitude of the earthquake event.
-    - `source_origin_time`: Origin time of the earthquake event.
+    - `rec_network`: Code of the seismic network.
+    - `rec_name`: Name of the receiver (station).
+    - `rec_type`: Type of the receiver.
+    - `rec_elevation_m`: Elevation of the receiver in meters.
+    - `rec_latitude_deg`: Latitude of the receiver.
+    - `rec_longitude_deg`: Longitude of the receiver.
+    - `rec_sampling_rate_hz`: Sampling rate of the receiver in Hz.
+    - `src_id`: Unique identifier of the earthquake event.
+    - `src_depth_km`: Depth of the earthquake event in kilometers.
+    - `src_latitude_deg`: Latitude of the earthquake event.
+    - `src_longitude_deg`: Longitude of the earthquake event.
+    - `src_magnitude`: Magnitude of the earthquake event.
+    - `src_origin_time`: Origin time of the earthquake event.
     - `p_travel_sec`: P-wave travel time in seconds.
 
 ## 🤝 Contributing

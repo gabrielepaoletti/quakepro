@@ -150,12 +150,12 @@ class Plotter(_PlotConfig):
                 axs[ch_idx].legend(loc='upper right')
                 axs[ch_idx].grid(True, axis='x')
             
-                axs[0].set_title(f'Event ID-{self.attr[self.attr.trace_name == trace_name].source_id.item()}')
+                axs[0].set_title(f'Event ID-{self.attr[self.attr.trace_name == trace_name].src_id.item()}')
                 axs[-1].set_xlabel('Samples [#]')
                 
             plt.tight_layout()
             if save_figure:
-                self.save_figure(f'{save_name}_{self.attr[self.attr.trace_name == trace_name].source_id.item()}', save_extension)
+                self.save_figure(f'{save_name}_{self.attr[self.attr.trace_name == trace_name].src_id.item()}', save_extension)
 
             plt.show()
 
@@ -208,7 +208,7 @@ class Plotter(_PlotConfig):
             for ch_idx, signal in enumerate(signals):
                 # Perform Fourier Transform
                 ft = np.fft.fft(signal)
-                freq = np.fft.fftfreq(signal.size, d=1/self.attr[self.attr.trace_name == trace_name].receiver_sampling_rate_hz.item())
+                freq = np.fft.fftfreq(signal.size, d=1/self.attr[self.attr.trace_name == trace_name].rec_sampling_rate_hz.item())
                 N = signal.size
                 ft = ft / N  # Normalize the amplitudes
                 half_point = N // 2
@@ -223,7 +223,7 @@ class Plotter(_PlotConfig):
                     axs = [axs]  # Make it iterable for the upcoming loop
 
                 # Plot the waveform
-                axs[0].set_title(f'Event ID-{self.attr[self.attr.trace_name == trace_name].source_id.item()}')
+                axs[0].set_title(f'Event ID-{self.attr[self.attr.trace_name == trace_name].src_id.item()}')
                 if plot_waveform:
                     axs[0].plot(signal, linewidth=0.75, color='k', label=f'CH{ch_idx + 1}')
                     axs[0].set_xlabel('Samples [#]')
@@ -246,7 +246,7 @@ class Plotter(_PlotConfig):
 
                 plt.tight_layout()
                 if save_figure:
-                    self.save_figure(f'{save_name}_{self.attr[self.attr.trace_name == trace_name].source_id.item()}', save_extension)
+                    self.save_figure(f'{save_name}_{self.attr[self.attr.trace_name == trace_name].src_id.item()}', save_extension)
                 plt.show()
     
     def plot_spectrogram(self, slice_obj: Union[slice, int, str] = 'random', nperseg: int = 128, noverlap: int = None, log_scale: bool = False, zero_padding_factor: int = 8, plot_waveform: bool = True, colorbar: bool = False, cmap: str = 'jet', save_figure: bool = False, save_name: str = 'spectrogram', save_extension: str = 'jpg') -> None:
@@ -317,7 +317,7 @@ class Plotter(_PlotConfig):
                     noverlap = int(nperseg * 0.75)
 
                 nfft = nperseg * zero_padding_factor
-                sampling_rate = self.attr[self.attr.trace_name == trace_name].receiver_sampling_rate_hz.item()
+                sampling_rate = self.attr[self.attr.trace_name == trace_name].rec_sampling_rate_hz.item()
                 frequencies, times, Zxx = stft(signal, fs=sampling_rate, window='hann', nperseg=nperseg, noverlap=noverlap, nfft=nfft)
                 spectrogram = np.abs(Zxx)**2
 
@@ -333,7 +333,7 @@ class Plotter(_PlotConfig):
                     ax1 = fig.add_subplot(gs[0, 0])
                     time = np.arange(signal.size) / sampling_rate
                     ax1.plot(time, signal, color='k', linewidth=0.75, label=f'CH{ch_index + 1}')
-                    ax1.set_title(f'Event ID-{self.attr[self.attr.trace_name == trace_name].source_id.item()}')
+                    ax1.set_title(f'Event ID-{self.attr[self.attr.trace_name == trace_name].src_id.item()}')
                     ax1.set_ylabel('Amplitude')
                     ax1.grid(True, axis='x')
                     ax1.tick_params(axis='x', labelbottom=False)
@@ -342,7 +342,7 @@ class Plotter(_PlotConfig):
 
                 ax2 = fig.add_subplot(gs[1, 0], sharex=ax1 if plot_waveform else None)
                 pcm = ax2.pcolormesh(times, frequencies, spectrogram, shading='gouraud', cmap=cmap, norm=Normalize(vmin=np.min(spectrogram), vmax=np.max(spectrogram)))
-                ax2.set_title(f'Event ID-{self.attr[self.attr.trace_name == trace_name].source_id.item()}') if not plot_waveform else None
+                ax2.set_title(f'Event ID-{self.attr[self.attr.trace_name == trace_name].src_id.item()}') if not plot_waveform else None
                 ax2.set_ylabel('Frequency [Hz]')
                 ax2.set_xlabel('Time [s]')
             
@@ -354,6 +354,6 @@ class Plotter(_PlotConfig):
                 # Adjust layout manually instead of tight_layout
                 plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
                 if save_figure:
-                    self.save_figure(f'{save_name}_{self.attr[self.attr.trace_name == trace_name].source_id.item()}', save_extension)
+                    self.save_figure(f'{save_name}_{self.attr[self.attr.trace_name == trace_name].src_id.item()}', save_extension)
 
                 plt.show()
