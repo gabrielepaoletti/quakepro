@@ -9,7 +9,7 @@ User Guide
    user_guide/installation
    user_guide/tutorials
 
-This guide provides a comprehensive overview of key features and functionalities of SeismUtils. It is designed to help you navigate and utilize it effectively.
+This guide provides a comprehensive overview of key features and functionalities of QUAKEPRO. It is designed to help you navigate and utilize it effectively.
 
 Getting started
 ---------------
