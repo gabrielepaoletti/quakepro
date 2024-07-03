@@ -10,11 +10,13 @@ Before proceeding with the installation, ensure that you have a compatible Pytho
 It's strongly recommended creating a virtual environment to maintain a clean workspace and avoid dependency conflicts. Tools such as ``conda`` or ``venv`` are suitable for creating isolated Python environments.
 
 .. tabs::
-    .. code-tab:: PIP
-        python -m venv quakepro
+    .. tab:: `pip`
+        .. code-block:: bash
+            python -m venv quakepro
     
-    .. code-tab:: Conda
-        conda create --name quakepro
+    .. tab:: `conda`
+        .. code-block:: bash
+            conda create --name quakepro
 
 Stable release
 --------------
