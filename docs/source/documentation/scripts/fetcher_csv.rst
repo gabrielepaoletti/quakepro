@@ -24,10 +24,10 @@ Download waveforms from CSV
         **-m, --model** : *str*
             Earth velocity model for travel time calculations.
 
-        **--time_before_p** : *str*
+        **--time_before_p** : *float*
             Time in seconds before P-wave arrival to start the trace.
 
-        **--time_after_p** : *str*
+        **--time_after_p** : *float*
             Time in seconds after P-wave arrival to end the trace.
 
         **--catalog_path** : *str*
