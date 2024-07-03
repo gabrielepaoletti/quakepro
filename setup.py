@@ -19,6 +19,11 @@ config = {
     'keywords': 'seismology earthquake catalog waveform download processing geophysics data-analysis',
     'long_description': long_description,
     'long_description_content_type': 'text/markdown',
+    'entry_points': {
+        'console_scripts': [
+            'qpf-csv=scripts.fetcher_csv:main'
+        ]
+    }
 }
 
 setup(**config)
