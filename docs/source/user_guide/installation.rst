@@ -31,7 +31,7 @@ The QUAKEPRO package is conveniently available for installation via ``pip``, the
 This command fetches and installs the most recent stable version of QUAKEPRO, along with its required dependencies.
 
 .. warning::
-    At present, installation via `pip`` is unavailable, as the project is still in its early stages. To install QUAKEPRO, please follow the instructions for the *Development version* installation.
+    At present, installation via ``pip`` is unavailable, as the project is still in its early stages. To install QUAKEPRO, please follow the instructions for the *Development version* installation.
 
 Development version
 -------------------
