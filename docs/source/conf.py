@@ -37,7 +37,7 @@ extensions = [
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
     'sphinxcontrib.autoprogram',
-    'sphinx-argparse'
+    'sphinxarg.ext'
 ]
 
 # The default setting is 'signature', but you can change it to 'none'
