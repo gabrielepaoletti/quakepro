@@ -29,10 +29,8 @@ Modules
 Executable scripts
 ------------------
 
-.. program:: qpf-csv
+.. card:: :material-outlined:`image;1.7em` Download waveforms from CSV
+   :link: documentation/scripts/fetcher_csv
+   :link-type: doc
 
-      Download seismic waveforms using FDSN web services.
-
-      .. option:: -p, -.provider
-
-         Client code for the FDSN data service.
+   Coming soon...
