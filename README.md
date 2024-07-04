@@ -1,9 +1,3 @@
-<picture align="center">
-  <source media="(prefers-color-scheme: dark)" srcset="https://quakepro.readthedocs.io/en/latest/_static/quakepro_logo_dark.png">
-  <img alt="Pandas Logo" src="https://quakepro.readthedocs.io/en/latest/#">
-</picture>
-
-
 # QUAKEPRO: earthQUAKE Processing and Retrieval Operations
 
 An open-source, user-friendly tool designed to streamline the entire workflow of seismological data handling — from downloading seismic waveforms to processing and visualization. Developed for researchers and enthusiasts in seismology. 
