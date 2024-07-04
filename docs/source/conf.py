@@ -76,7 +76,7 @@ html_favicon = '_static/logos/quakepro_tab_icon_light.ico'
 
 html_theme_options = {
    'logo': {
-      'image_light': '_static/logos/quakepro_logo_dark.png',
-      'image_dark': '_static/logos/quakepro_logo_light.png',
+      'image_light': '_static/logos/quakepro_logo_black.png',
+      'image_dark': '_static/logos/quakepro_logo_white.png',
    }
 }
