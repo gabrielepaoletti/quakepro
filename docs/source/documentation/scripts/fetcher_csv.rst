@@ -3,7 +3,7 @@ QUAKEPRO Fetcher (QPF) - CSV
 
 .. option:: $ qpf-csv <subcommand> [options]
 
-    Download seismic waveforms using FDSN web services from a CSV earthquake catalog.
+    Download seismic waveforms using FDSN web services from a pre-built CSV earthquake catalog.
 
     .. warning::
         For the script to work properly, it is important that the CSV input columns are formatted as explained in the `tutorial <https://quakepro.readthedocs.io/en/latest/user_guide/tutorials.html>`_.
