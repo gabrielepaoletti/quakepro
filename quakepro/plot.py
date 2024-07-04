@@ -65,7 +65,7 @@ class _PlotConfig:
         Parameters
         ----------
         save_name : str, optional
-            The base name used for saving figures when ``save_figure`` is True. It serves as the prefix for file names.
+            The base name used for saving figures when ``save_figure`` is ``True``. It serves as the prefix for file names.
 
         save_extension : str, optional
             The file extension to use when saving figures, such as ``'jpg'``, ``'png'``, etc... The default extension is ``'jpg'``.
