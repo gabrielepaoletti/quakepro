@@ -142,12 +142,12 @@ class Plotter(_PlotConfig):
         else:
             raise ValueError("slice_obj must be 'random' or a slice object")
         
-        for _, trace_name in enumerate(trace_names):
-            fig, axs = plt.subplots(3, 1, figsize=(10, 5), sharex=True, sharey=True)
+        for trace_name in trace_names:
+            _, axs = plt.subplots(3, 1, figsize=(10, 5), sharex=True, sharey=True)
             signals = self.wavs[trace_name][:]
 
-            for ch_idx, signal in enumerate(signals):
-                axs[ch_idx].plot(signal, c='k', lw=0.75, label=f'CH{ch_idx + 1}')
+            for ch_idx, signal in enumerate(signals, start=1):
+                axs[ch_idx].plot(signal, c='k', lw=0.75, label=f'CH{ch_idx}')
                 axs[ch_idx].set_ylabel('Amplitude')
                 axs[ch_idx].set_xlim(0, len(signal))
                 axs[ch_idx].legend(loc='upper right')
@@ -208,10 +208,10 @@ class Plotter(_PlotConfig):
         else:
             raise ValueError("slice_obj must be 'random' or a slice object")
         
-        for _, trace_name in enumerate(trace_names):
+        for trace_name in trace_names:
             signals = self.wavs[trace_name][:]
             
-            for ch_idx, signal in enumerate(signals):
+            for ch_idx, signal in enumerate(signals, start=1):
                 # Perform Fourier Transform
                 ft = np.fft.fft(signal)
                 freq = np.fft.fftfreq(signal.size, d=1/self.attr[self.attr.trace_name == trace_name].rec_sampling_rate_hz.item())
@@ -223,15 +223,15 @@ class Plotter(_PlotConfig):
 
                 # Plotting
                 if plot_waveform:
-                    fig, axs = plt.subplots(2, 1, figsize=(10, 8), gridspec_kw={'height_ratios': [1, 3]})
+                    _, axs = plt.subplots(2, 1, figsize=(10, 8), gridspec_kw={'height_ratios': [1, 3]})
                 else:
-                    fig, axs = plt.subplots(1, 1, figsize=(10, 6))
+                    _, axs = plt.subplots(1, 1, figsize=(10, 6))
                     axs = [axs]  # Make it iterable for the upcoming loop
 
                 # Plot the waveform
                 axs[0].set_title(f'Event ID-{self.attr[self.attr.trace_name == trace_name].src_id.item()}')
                 if plot_waveform:
-                    axs[0].plot(signal, linewidth=0.75, color='k', label=f'CH{ch_idx + 1}')
+                    axs[0].plot(signal, linewidth=0.75, color='k', label=f'CH{ch_idx}')
                     axs[0].set_xlabel('Samples [#]')
                     axs[0].set_ylabel('Amplitude')
                     axs[0].set_xlim(0, len(signal))
@@ -316,10 +316,10 @@ class Plotter(_PlotConfig):
         else:
             raise ValueError("slice_obj must be 'random' or a slice object")
 
-        for _, trace_name in enumerate(trace_names):
+        for trace_name in trace_names:
             signals = self.wavs[trace_name][:]
             
-            for ch_index, signal in enumerate(signals):
+            for ch_idx, signal in enumerate(signals, start=1):
 
                 signal -= np.mean(signal)
                 if noverlap is None:
@@ -341,7 +341,7 @@ class Plotter(_PlotConfig):
                 if plot_waveform:
                     ax1 = fig.add_subplot(gs[0, 0])
                     time = np.arange(signal.size) / sampling_rate
-                    ax1.plot(time, signal, color='k', linewidth=0.75, label=f'CH{ch_index + 1}')
+                    ax1.plot(time, signal, color='k', linewidth=0.75, label=f'CH{ch_idx}')
                     ax1.set_title(f'Event ID-{self.attr[self.attr.trace_name == trace_name].src_id.item()}')
                     ax1.set_ylabel('Amplitude')
                     ax1.grid(True, axis='x')
