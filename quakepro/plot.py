@@ -109,16 +109,19 @@ class Plotter(_PlotConfig):
         Parameters
         ----------
         slice_obj : Union[slice, int, str], optional
-            The slice object or ``'random'`` to select a waveform. Default is ``'random'``.
+            The selection criterion for the waveform(s) to plot. It can be:
+            - An ``int`` specifying the index of a single waveform (e.g., 0 for the first waveform).
+            - A slice object to select multiple waveforms (e.g., ``slice(0, 3)`` to plot the first three waveforms).
+            - The string ``'random'`` to randomly select one waveform for plotting. Default is ``'random'``.
 
         save_figure : bool, optional
-            If ``True``, save the figure. Default is ``False``.
+             If ``True``, the plot will be saved to a file. Default is ``False``. When enabled, the plot will be saved with the specified name and file extension.
 
         save_name : str, optional
-            The name to save the figure. Default is ``'waveform'``.
+            The base name to use when saving the figure. Default is ``'waveform'``. The final file name will include this base name and the event ID of the plotted event.
 
         save_extension : str, optional
-            The file extension to save the figure. Default is ``'jpg'``.
+            The file extension to use when saving the figure. Default is ``'jpg'``. Supported extensions typically include formats such as ``'png'``, ``'pdf'``, etc.
 
         Returns
         -------
@@ -166,22 +169,25 @@ class Plotter(_PlotConfig):
         Parameters
         ----------
         slice_obj : Union[slice, int, str], optional
-            The slice object or ``'random'`` to select a waveform. Default is ``'random'``.
+            The selection criterion for the waveform(s) to plot. It can be:
+            - An ``int`` specifying the index of a single waveform (e.g., 0 for the first waveform).
+            - A slice object to select multiple waveforms (e.g., ``slice(0, 3)`` to plot the first three waveforms).
+            - The string ``'random'`` to randomly select one waveform for plotting. Default is ``'random'``.
 
         log_scale : bool, optional
-            If ``True``, plot on a logarithmic scale. Default is ``True``.
+            If ``True``, the amplitude spectrum will be plotted on a logarithmic scale. Default is ``True``.
 
         plot_waveform : bool, optional
-            If ``True``, plot the waveform along with the Fourier Transform. Default is ``True``.
+            If ``True``, the original waveform will be plotted alongside its Fourier Transform. Default is ``True``.
 
         save_figure : bool, optional
-            If ``True``, save the figure. Default is ``False``.
+             If ``True``, the plot will be saved to a file. Default is ``False``. When enabled, the plot will be saved with the specified name and file extension.
 
         save_name : str, optional
-            The name to save the figure. Default is ``'fourier_transform'``.
+            The base name to use when saving the figure. Default is ``'waveform'``. The final file name will include this base name and the event ID of the plotted event.
 
         save_extension : str, optional
-            The file extension to save the figure. Default is ``'jpg'``.
+            The file extension to use when saving the figure. Default is ``'jpg'``. Supported extensions typically include formats such as ``'png'``, ``'pdf'``, etc.
 
         Returns
         -------
@@ -259,34 +265,34 @@ class Plotter(_PlotConfig):
             The slice object or 'random' to select a waveform. Default is ``'random'``.
 
         nperseg : int, optional
-            Length of each segment for STFT. Default is ``128``.
+                Length of each segment for Short-Time Fourier Transform (STFT). This parameter defines the number of samples per segment. Default is ``128``.
 
         noverlap : int, optional
-            Number of points to overlap between segments. Default is ``None``.
+                Number of points to overlap between segments. If ``None``, no overlap is applied. Default is ``None``.
 
         log_scale : bool, optional
-            If ``True``, plot on a logarithmic scale. Default is ``False``.
+                If ``True``, the spectrogram will be plotted on a logarithmic scale. This is useful for visualizing a wide range of signal amplitudes. Default is ``False``.
 
         zero_padding_factor : int, optional
-            Factor by which to zero-pad the FFT. Default is ``8``.
+            Factor by which to zero-pad the FFT. Zero-padding can increase the frequency resolution of the spectrogram. Default is ``8``.
 
         plot_waveform : bool, optional
-            If ``True``, plot the waveform along with the spectrogram. Default is ``True``.
+            If ``True``, the original waveform will be plotted alongside its Fourier Transform. Default is ``True``.
 
         colorbar : bool, optional
-            If ``True``, add a colorbar to the spectrogram. Default is ``False``.
+                If ``True``, a colorbar will be added to the spectrogram plot. The colorbar provides a reference for the amplitude of the frequency components. Default is ``False``.
 
         cmap : str, optional
-            Colormap to use for the spectrogram. Default is ``'jet'``.
+            Colormap to use for the spectrogram. The choice of colormap can enhance the visual interpretation of the spectrogram. Default is ``'jet'``.
 
         save_figure : bool, optional
-            If ``True``, save the figure. Default is ``False``.
+             If ``True``, the plot will be saved to a file. Default is ``False``. When enabled, the plot will be saved with the specified name and file extension.
 
         save_name : str, optional
-            The name to save the figure. Default is ``'spectrogram'``.
+            The base name to use when saving the figure. Default is ``'waveform'``. The final file name will include this base name and the event ID of the plotted event.
 
         save_extension : str, optional
-            The file extension to save the figure. Default is ``'jpg'``.
+            The file extension to use when saving the figure. Default is ``'jpg'``. Supported extensions typically include formats such as ``'png'``, ``'pdf'``, etc.
 
         Returns
         -------

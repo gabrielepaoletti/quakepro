@@ -1,4 +1,4 @@
-Signal Processing
+Processing
 ======================================
 
 .. autoclass:: quakepro.processing.Processor

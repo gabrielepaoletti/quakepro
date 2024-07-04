@@ -17,7 +17,7 @@ import pandas as pd
 from tqdm.auto import tqdm
 from scipy.signal import butter, sosfilt, sosfiltfilt, get_window
 
-from typing import Tuple
+from typing import Tuple, Union
 
 # --------------------------------------------------------------------------------------------------------
 # DEFINING CLASSES AND METHODS
@@ -68,14 +68,17 @@ class Processor:
         Parameters
         ----------
         window_type : str
-            The type of window to create.
+                The type of window to create. This defines the shape of the tapering window to be applied to each waveform.
 
         *params : tuple, optional
-            Additional parameters to pass to the window function.
+            Additional parameters to pass to the window function. These parameters vary depending on the window type selected.
 
         Returns
         -------
-        None 
+        None
+
+        .. note::
+            If you wish to explore tapering window options, consult the ``scipy.signal.get_window`` documentation available at `SciPy Docs <https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.get_window.html>`_.
         """
         for trace_name in tqdm(iterable=self.attr['trace_name'], desc='Applying taper'):
             signals = self.wavs[trace_name][:]
@@ -87,23 +90,23 @@ class Processor:
             
             self.wavs[trace_name][:] = tapered_signals
 
-    def filter(self, filter_type: str, cutoff: list, order: int = 5, zero_phase: bool=True) -> None:
+    def filter(self, filter_type: str, cutoff: Union[int, list], order: int = 5, zero_phase: bool=True) -> None:
         """
         Apply filtering to all waveforms in the HDF5 file.
 
         Parameters
         ----------
         filter_type : str
-            The type of filter to apply.
+            The type of filter to apply. This can be ``'lowpass'``, ``'highpass'``, ``'bandpass'``, or ``'bandstop'``.
 
-        cutoff : list
-            The cutoff frequency or frequencies.
+        cutoff : Union[int, list]
+            The cutoff frequency or frequencies for the filter. For ``'lowpass'`` and ``'highpass'`` filters, this should be a single value. For ``'bandpass'`` and ``'bandstop'`` filters, this should be a list of two values ``[low_cutoff, high_cutoff]``.
 
         order : int, optional
-            The order of the filter. Default is ``5``.
+            The order of the filter. Higher order filters have a steeper roll-off. Default is ``5``.
             
         zero_phase : bool, optional
-            If ``True``, apply zero-phase filtering. Default is ``True``.
+             If ``True``, apply zero-phase filtering using ``sosfiltfilt``, which applies the filter forward and backward to eliminate phase distortion. If ``False``, apply standard filtering using ``sosfilt``. Default is ``True``.
 
         Returns
         -------
