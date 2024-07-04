@@ -130,7 +130,7 @@ class Plotter(_PlotConfig):
         Raises
         ------
         ValueError
-            If ``slice_obj`` is not an integer, a slice object, or the string ``'random'``.
+            If ``slice_obj`` is not an ``int``, a ``slice()`` object, or the string ``'random'``.
         """
         if slice_obj == 'random':
             index = random.randint(0, len(self.attr['trace_name']) - 1)
@@ -196,7 +196,7 @@ class Plotter(_PlotConfig):
         Raises
         ------
         ValueError
-            If ``slice_obj`` is not an integer, a slice object, or the string ``'random'``.
+            If ``slice_obj`` is not an ``int``, a ``slice()`` object, or the string ``'random'``.
         """
         if slice_obj == 'random':
             index = random.randint(0, len(self.attr['trace_name']) - 1)
@@ -304,7 +304,7 @@ class Plotter(_PlotConfig):
         Raises
         ------
         ValueError
-            If ``slice_obj`` is not an integer, a slice object, or the string ``'random'``.
+            If ``slice_obj`` is not an ``int``, a ``slice()`` object, or the string ``'random'``.
         """
         if slice_obj == 'random':
             index = random.randint(0, len(self.attr['trace_name']) - 1)
