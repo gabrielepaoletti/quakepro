@@ -5,7 +5,7 @@ QUAKEPRO: earthQUAKE Processing and Retrieval Operations
    :maxdepth: 1
    :hidden:
 
-   User Guide <user_guide>
+   Getting Started <getting_started>
    API Reference <api_reference>
 
 **Version:** v0.1.0
@@ -15,8 +15,8 @@ QUAKEPRO: earthQUAKE Processing and Retrieval Operations
    :gutter: 2 2 3 3
    :class-container: startpage-grid
 
-   .. grid-item-card:: :material-regular:`account_circle;1.7em` User Guide
-      :link: user_guide
+   .. grid-item-card:: :material-regular:`account_circle;1.7em` Getting Started
+      :link: getting_started
       :link-type: doc
       :link-alt: Getting Started
 
