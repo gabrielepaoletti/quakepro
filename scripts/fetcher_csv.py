@@ -374,27 +374,27 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         '-p', '--client', type=str, required=True,
         choices=['AUSPASS', 'BGR', 'EIDA', 'EMSC', 'ETH', 'GEOFON', 'GEONET', 'GFZ', 'ICGC', 'IESDMC', 'INGV', 'IPGP', 'IRIS', 'IRISPH5', 'ISC', 'KNMI', 'KOERI', 'LMU', 'NCEDC', 'NIEP', 'NOA', 'ODC', 'ORFEUS', 'RASPISHAKE', 'RESIF', 'RESIFPH5', 'SCEDC', 'TEXNET', 'UIB-NORSAR', 'USGS', 'USP'],
-        help='Client code for the FDSN data service.'
+        help='Client code for the FDSN data service. This is typically an abbreviation of the data provider.'
     )
     parser.add_argument(
         '-n', '--network', type=str, required=True, 
-        help='Network code to identify the seismic network.'
+        help='Seismic network to retrieve data from. Network codes are standardized identifiers for networks'
     )
     parser.add_argument(
         '-s', '--station', type=str, required=True,
-        help='Station code to retrieve data for.'
+        help='The station code to retrieve data for. This identifies a specific seismic station within the network.'
     )
     parser.add_argument(
         '-l', '--location', type=str, required=True,
-        help='Location code within the station.'
+        help='Location code within the station. This can be used to identify different sensors or positions at the same station.'
     )
     parser.add_argument(
         '-c', '--channel', type=str, required=True,
-        help='Channel code(s) indicating types of data.'
+        help='Channel code(s) specifying the types of data to retrieve. Channels are typically identified by three characters.'
     )
     parser.add_argument(
         '-m', '--model', type=str, required=True,
-        help='Earth model for travel time calculations.'
+        help='Earth velocity model for travel time calculations.'
     )
     parser.add_argument(
         '--time_before_p', type=float, required=True,
@@ -413,16 +413,16 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         '--detrend', type=str, required=False,
         choices=['simple', 'linear', 'constant', 'polynomial', 'spline', 'None'], default='linear', 
-        help='Method used for detrending data (default: linear).'
+        help='Method to be used for detrending the data. Default is "linear".'
     )
     parser.add_argument(
         '--resample', type=float, required=False,
-        help='New sampling rate in Hz to resample the waveform data.'
+        help='The new sampling rate in Hz to resample the waveform data. This can be used to standardize the sampling rate across different datasets.'
     )
     parser.add_argument(
         '--remove_response', required=False,
         choices=['VEL', 'ACC', 'DISP', 'None'],
-        help='Remove the instrument response and convert to the specified output.'
+        help='Specifies whether to remove the instrument response from the data and convert to a specified output.'
     )
 
     return parser.parse_args()

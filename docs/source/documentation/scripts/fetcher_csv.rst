@@ -13,16 +13,16 @@ QUAKEPRO Fetcher (QPF) - CSV
             Client code for the FDSN data service. This is typically an abbreviation of the data provider.
 
         **-n, \--network** : *str*
-            Sseismic network to retrieve data from. Network codes are standardized identifiers for networks
+            Seismic network to retrieve data from. Network codes are standardized identifiers for networks
         
         **-s, \--station** : *str*
             The station code to retrieve data for. This identifies a specific seismic station within the network.
 
         **-l, \--location** : *str*
-            Location code within the station. This can be used to identify different sensors or positions at the same station
+            Location code within the station. This can be used to identify different sensors or positions at the same station.
 
         **-c, \--channel** : *str*
-            Channel code(s) specifying the types of data to retrieve. Channels are typically identified by three characters,
+            Channel code(s) specifying the types of data to retrieve. Channels are typically identified by three characters.
 
         **-m, \--model** : *str*
             Earth velocity model for travel time calculations.
