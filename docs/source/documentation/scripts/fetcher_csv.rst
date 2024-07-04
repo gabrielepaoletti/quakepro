@@ -63,10 +63,13 @@ QUAKEPRO Fetcher (QPF) - CSV
         - **Attributes CSV file**, that contains metadata for each seismic event/waveform and the station itself.
         - **HDF5 waveforms file**, that stores all the waveforms as ``numpy.ndarray`` objects. The file is structured into datasets, with each dataset named according to the trace name. This enables easy identification and matching of waveforms with their respective metadata.
         
+        .. raw:: html
+            <br>
+
         The datasets in the HDF5 file are linked to the metadata in the CSV file through the ``trace_name`` column. This allows users to easily pair waveform data with their corresponding event and station metadata.
 
         .. warning::
-            It is important not to rename these files to ensure proper integration with `processing <https://quakepro.readthedocs.io/en/latest/documentation/modules/processing.html>`_ and `visualization <https://quakepro.readthedocs.io/en/latest/documentation/modules/visualization.html>`_ modules. You can safely rename the directory, but changing the filenames inside it may disrupt the functionality of other modules.
+            It is important not to rename these files to ensure proper integration with `processing <https://quakepro.readthedocs.io/en/latest/documentation/modules/processing.html>`_ and `visualization <https://quakepro.readthedocs.io/en/latest/documentation/modules/visualization.html>`_ modules. You can safely rename the directory, but changing the filenames inside it may disrupt the functionality of other functions and methods.
 
 
         
