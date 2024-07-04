@@ -23,7 +23,7 @@ Modules
 Provide a comprehensive set of Python tools primarily focused on signal processing and visualization, facilitating in-depth analysis and interpretation of seismic data through customizable and efficient code implementations.
 
 
-.. card:: :material-regular:`earthquake;1.7em` Signal Processing
+.. card:: :material-outlined:`earthquake;1.7em` Processing
    :link: documentation/modules/processing
    :link-type: doc
 

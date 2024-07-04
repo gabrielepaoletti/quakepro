@@ -1,4 +1,4 @@
-QUAKEPRO Fetcher (QPF) from CSV
+QUAKEPRO Fetcher (QPF) - CSV
 ===============================
 
 .. option:: $ qpf-csv <subcommand> [options]
