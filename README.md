@@ -1,6 +1,6 @@
 <picture align="center">
   <source media="(prefers-color-scheme: dark)" srcset="https://quakepro.readthedocs.io/en/latest/_static/quakepro_logo_light.png">
-  <img alt="QUAKEPRO Logo" src="https://quakepro.readthedocs.io/en/latest/_static/quakepro_logo_dark.png">
+  <img alt="QUAKEPRO Logo" src="https://quakepro.readthedocs.io/en/latest/_static/quakepro_logo_dark.png" style="width: 200px;">
 </picture>
 
 # QUAKEPRO: earthQUAKE Processing and Retrieval Operations
