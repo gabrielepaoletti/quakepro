@@ -1,6 +1,8 @@
 # QUAKEPRO: earthQUAKE Processing and Retrieval Operations
 
-An open-source, user-friendly tool designed to streamline the entire workflow of seismological data handling —- from downloading seismic waveforms to processing and visualization. Developed for researchers and enthusiasts in seismology, QUAKEPRO integrates data retrieval, processing, and visualization into a cohesive framework, enhancing efficiency and ease of use.
+An open-source, user-friendly tool designed to streamline the entire workflow of seismological data handling — from downloading seismic waveforms to processing and visualization. Developed for researchers and enthusiasts in seismology. 
+
+QUAKEPRO integrates data retrieval, processing, and visualization into a cohesive framework, enhancing efficiency and ease of use.
 
 ## ✨ Features
 
