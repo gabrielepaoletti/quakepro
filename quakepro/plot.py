@@ -110,9 +110,9 @@ class Plotter(_PlotConfig):
         ----------
         slice_obj : Union[slice, int, str], optional
             The selection criterion for the waveform(s) to plot. It can be:
-            - An ``int`` specifying the index of a single waveform (e.g., 0 for the first waveform).
-            - A slice object to select multiple waveforms (e.g., ``slice(0, 3)`` to plot the first three waveforms).
-            - The string ``'random'`` to randomly select one waveform for plotting. Default is ``'random'``.
+                - An ``int`` specifying the index of a single waveform (e.g., 0 for the first waveform).
+                - A slice object to select multiple waveforms (e.g., ``slice(0, 3)`` to plot the first three waveforms).
+                - The string ``'random'`` to randomly select one waveform for plotting. Default is ``'random'``.
 
         save_figure : bool, optional
              If ``True``, the plot will be saved to a file. Default is ``False``. When enabled, the plot will be saved with the specified name and file extension.
@@ -170,9 +170,9 @@ class Plotter(_PlotConfig):
         ----------
         slice_obj : Union[slice, int, str], optional
             The selection criterion for the waveform(s) to plot. It can be:
-            - An ``int`` specifying the index of a single waveform (e.g., 0 for the first waveform).
-            - A slice object to select multiple waveforms (e.g., ``slice(0, 3)`` to plot the first three waveforms).
-            - The string ``'random'`` to randomly select one waveform for plotting. Default is ``'random'``.
+                - An ``int`` specifying the index of a single waveform (e.g., 0 for the first waveform).
+                - A slice object to select multiple waveforms (e.g., ``slice(0, 3)`` to plot the first three waveforms).
+                - The string ``'random'`` to randomly select one waveform for plotting. Default is ``'random'``.
 
         log_scale : bool, optional
             If ``True``, the amplitude spectrum will be plotted on a logarithmic scale. Default is ``True``.
@@ -262,7 +262,10 @@ class Plotter(_PlotConfig):
         Parameters
         ----------
         slice_obj : Union[slice, int, str], optional
-            The slice object or 'random' to select a waveform. Default is ``'random'``.
+            The selection criterion for the waveform(s) to plot. It can be:
+                - An ``int`` specifying the index of a single waveform (e.g., 0 for the first waveform).
+                - A slice object to select multiple waveforms (e.g., ``slice(0, 3)`` to plot the first three waveforms).
+                - The string ``'random'`` to randomly select one waveform for plotting. Default is ``'random'``.
 
         nperseg : int, optional
                 Length of each segment for Short-Time Fourier Transform (STFT). This parameter defines the number of samples per segment. Default is ``128``.

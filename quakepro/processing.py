@@ -64,6 +64,9 @@ class Processor:
     def taper(self, window_type: str, *params) -> None:
         """
         Apply tapering to all waveforms in the HDF5 file.
+
+        .. note::
+            If you wish to explore available tapering window options, along with their ``*params``, consult the ``scipy.signal.get_window`` documentation available at `SciPy Docs <https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.get_window.html>`_.
     
         Parameters
         ----------
@@ -76,9 +79,6 @@ class Processor:
         Returns
         -------
         None
-
-        .. note::
-            If you wish to explore tapering window options, consult the ``scipy.signal.get_window`` documentation available at `SciPy Docs <https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.get_window.html>`_.
         """
         for trace_name in tqdm(iterable=self.attr['trace_name'], desc='Applying taper'):
             signals = self.wavs[trace_name][:]
@@ -106,7 +106,7 @@ class Processor:
             The order of the filter. Higher order filters have a steeper roll-off. Default is ``5``.
             
         zero_phase : bool, optional
-             If ``True``, apply zero-phase filtering using ``sosfiltfilt``, which applies the filter forward and backward to eliminate phase distortion. If ``False``, apply standard filtering using ``sosfilt``. Default is ``True``.
+             If ``True``, apply zero-phase filtering using ``sosfiltfilt()``, which applies the filter forward and backward to eliminate phase distortion. If ``False``, apply standard filtering using ``sosfilt()``. Default is ``True``.
 
         Returns
         -------
