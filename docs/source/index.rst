@@ -18,7 +18,7 @@ QUAKEPRO: earthQUAKE Processing and Retrieval Operations
    .. grid-item-card:: :material-regular:`account_circle;1.7em` User Guide
       :link: user_guide
       :link-type: doc
-      :link-alt: User Guide
+      :link-alt: Getting Started
 
       Access comprehensive installation instructions and detailed tutorials to get started with QUAKEPRO.
 

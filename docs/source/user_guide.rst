@@ -1,18 +1,21 @@
-User Guide
-=====================
+Getting Started
+================
 
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: Getting started
+   :caption: User guide
 
    user_guide/installation
    user_guide/tutorials
 
-This guide provides a comprehensive overview of key features and functionalities of QUAKEPRO. It is designed to help you navigate and utilize it effectively.
+Welcome to QUAKEPRO! Start here to explore the capabilities of this tool and learn how to effectively use it for your seismic research and analysis needs.
 
-Getting started
----------------
+
+User guide
+----------
+
+This section provides a comprehensive overview of key features and functionalities of QUAKEPRO. It is designed to help you navigate and utilize it effectively.
 
 .. card:: :material-regular:`download_for_offline;1.7em` Installation
    :link: user_guide/installation
