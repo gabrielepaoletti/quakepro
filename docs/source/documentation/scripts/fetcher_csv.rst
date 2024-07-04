@@ -1,5 +1,5 @@
-Download waveforms from CSV
-===========================
+QUAKEPRO Fetcher (QPF) from CSV
+===============================
 
 .. option:: $ qpf-csv <subcommand> [options]
 
