@@ -33,7 +33,8 @@ An open-source, user-friendly tool designed to streamline the entire workflow of
 
 QUAKEPRO integrates data retrieval, processing, and visualization into a cohesive framework, enhancing efficiency and ease of use.
 
-Key features includes:
+Features
+--------
 
 - 📥 **Automated data retrieval:** Seamlessly download seismic waveforms using FDSN web services directly from CSV earthquake catalogs.
 - ⚙️ **Customized downloads:** Perform detrending, resampling, and response removal to prepare waveforms for analysis.
