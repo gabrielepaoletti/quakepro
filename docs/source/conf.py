@@ -77,11 +77,11 @@ html_css_files = [
 
 ]
 
-# html_favicon = '_static/logos/seismutils_circle_color.ico'
+html_favicon = '_static/logos/quakepro_tab_icon_light.ico'
 
-# html_theme_options = {
-#    'logo': {
-#       'image_light': '_static/logos/seismutils_logo_color_docs.png',
-#       'image_dark': '_static/logos/seismutils_logo_light_docs.png',
-#    }
-# }
+html_theme_options = {
+   'logo': {
+      'image_light': '_static/logos/quakepro_logo_dark.png',
+      'image_dark': '_static/logos/quakepro_logo_light.png',
+   }
+}
