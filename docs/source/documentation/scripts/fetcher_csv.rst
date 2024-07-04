@@ -58,7 +58,7 @@ QUAKEPRO Fetcher (QPF) - CSV
 
             /<station_name>/
             ├── <station_name>_attributes.csv
-            └── <ntation_name>_waveforms.hdf5
+            └── <station_name>_waveforms.hdf5
 
         - **Attributes CSV file**, that contains metadata for each seismic event/waveform and the station itself.
         - **HDF5 waveforms file**, that stores all the waveforms as ``numpy.ndarray`` objects. The file is structured into datasets, with each dataset named according to the trace name. This enables easy identification and matching of waveforms with their respective metadata.
