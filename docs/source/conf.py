@@ -72,11 +72,6 @@ html_theme = 'pydata_sphinx_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-# Add custom CSS files
-html_css_files = [
-
-]
-
 html_favicon = '_static/logos/quakepro_tab_icon_light.ico'
 
 html_theme_options = {
@@ -85,3 +80,7 @@ html_theme_options = {
       'image_dark': '_static/logos/quakepro_logo_light.png',
    }
 }
+
+html_css_files = [
+    'custom.css',
+]
