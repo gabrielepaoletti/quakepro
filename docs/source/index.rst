@@ -29,13 +29,15 @@ QUAKEPRO: earthQUAKE Processing and Retrieval Operations
 
       Explore detailed documentation of classes and methods for in-depth understanding.
 
-An open-source, user-friendly tool designed to streamline the entire workflow of seismological data handling—from downloading seismic waveforms to processing and visualization. Developed for researchers and enthusiasts in seismology, QUAKEPRO integrates data retrieval, processing, and visualization into a cohesive framework, enhancing efficiency and ease of use.
+An open-source, user-friendly tool designed to streamline the entire workflow of seismological data handling—from downloading seismic waveforms to processing and visualization. Developed for researchers and enthusiasts in seismology.
+
+QUAKEPRO integrates data retrieval, processing, and visualization into a cohesive framework, enhancing efficiency and ease of use.
 
 Key features includes:
 
 - 📥 **Automated data retrieval:** Seamlessly download seismic waveforms using FDSN web services directly from CSV earthquake catalogs.
 - ⚙️ **Customized downloads:** Perform detrending, resampling, and response removal to prepare waveforms for analysis.
-- 🔄 **Post-Processing:** Apply tapering, filtering (and more soon...) to the downloaded waveforms for further refinement and analysis.
+- 🔄 **Post-processing:** Apply tapering, filtering (and more soon...) to the downloaded waveforms for further refinement and analysis.
 - 📊 **Advanced visualization:** Generate plots of waveforms, spectra, spectrograms (and more soon...) to aid in the interpretation and presentation of seismic data.
 - 🧩 **Modular design:** The class-based structure ensures ease of use, allowing functions to automatically link and process data without manual intervention, simplifying the workflow.
 
