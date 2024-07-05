@@ -13,8 +13,8 @@ QUAKEPRO integrates data retrieval, processing, and visualization into a cohesiv
 
 - 📥 **Automated data retrieval:** Seamlessly download seismic waveforms using FDSN web services directly from CSV earthquake catalogs.
 - ⚙️ **Customized downloads:** Perform detrending, resampling, and response removal to prepare waveforms for analysis.
-- 🔄 **Post-processing:** Apply tapering, filtering (and more soon...) to the downloaded waveforms for further refinement and analysis.
-- 📊 **Advanced visualization:** Generate plots of waveforms, spectra, spectrograms (and more soon...) to aid in the interpretation and presentation of seismic data.
+- 🔄 **Post-processing:** Apply tapering, filtering *(and more soon...)* to the downloaded waveforms for further refinement and analysis.
+- 📊 **Advanced visualization:** Generate plots of waveforms, spectra, spectrograms *(and more soon...)* to aid in the interpretation and presentation of seismic data.
 - 🧩 **Modular design:** The class-based structure ensures ease of use, allowing functions to automatically link and process data without manual intervention, simplifying the workflow.
 
 ## 📋 Documentation
@@ -39,6 +39,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## 📧 Contacts
 
 Author: Gabriele Paoletti  
-Email: gabriele.paoletti@uniroma1.it
+E-mail: gabriele.paoletti@uniroma1.it
 
 Feel free to reach out if you have any questions or suggestions!
