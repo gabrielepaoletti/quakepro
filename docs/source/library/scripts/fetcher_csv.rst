@@ -54,8 +54,8 @@ QUAKEPRO Fetcher (QPF) - CSV
     :Returns:
         This script generates a directory (in the path from which this script was launched) named after the seismic station from which the data was downloaded. Inside this directory, you will find two primary files:
 
-        - **Attributes CSV file**, that contains metadata for each seismic event/waveform and the station itself.
-        - **HDF5 waveforms file**, that stores all the waveforms as ``numpy.ndarray`` objects. The file is structured into datasets, with each dataset named according to the trace name. This enables easy identification and matching of waveforms with their respective metadata.
+            - **Attributes CSV file**, that contains metadata for each seismic event/waveform and the station itself.
+            - **HDF5 waveforms file**, that stores all the waveforms as ``numpy.ndarray`` objects. The file is structured into datasets, with each dataset named according to the trace name.
         
         .. code-block:: text
 
