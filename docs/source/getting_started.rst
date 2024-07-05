@@ -7,7 +7,7 @@ Getting Started
    :caption: User guide
 
    user_guide/installation
-   user_guide/tutorials
+   user_guide/tutorial_index
 
 Welcome to QUAKEPRO! Start here to explore the capabilities of this tool and learn how to effectively use it for your seismic research and analysis needs.
 
