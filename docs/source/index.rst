@@ -27,7 +27,7 @@ QUAKEPRO: earthQUAKE Processing and Retrieval Operations
       :link-type: doc
       :link-alt: API Reference
 
-      Explore detailed documentation of classes and methods for in-depth understanding.
+      Explore detailed documentation of classes, methods and scripts for in-depth understanding.
 
 An open-source, user-friendly tool designed to streamline the entire workflow of seismological data handling — from downloading seismic waveforms to processing and visualization. Developed for researchers in the realm of seismology.
 
