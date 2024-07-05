@@ -17,15 +17,15 @@ Hope these tutorials have provided a solid foundation for using QUAKEPRO to mana
 .. raw:: html
     <br>
 
-- 📚 **API Documentation**: For developers looking to extend or integrate QUAKEPRO, our `API documentation <https://quakepro.readthedocs.io/en/latest/api_reference.html>`_ offers detailed descriptions and examples.
-- ❓ **FAQ**: Find answers to common questions and troubleshooting tips in our `FAQ section <https://github.com/gabrielepaoletti/quakepro>`_.
+- 📚 **API Documentation**: For developers looking to extend or integrate QUAKEPRO, our `API documentation <https://quakepro.readthedocs.io/en/latest/api_reference.html>`_ offers detailed descriptions of methods and scripts.
+- ❓ **FAQ**: Find answers to common questions and troubleshooting tips in our `FAQ section <https://quakepro.readthedocs.io/en/latest/user_guide/faq.html>`_.
 
 If you encounter any issues or have further questions, you can reach out for support through the following channels:
 
 .. raw:: html
     <br>
 
-- 🐛 **GitHub**: If you encounter any problems or bugs, please report an issue on our `GitHub repository <https://quakepro.readthedocs.io/en/latest/user_guide/faq.html>`_.
+- 🐛 **GitHub**: If you encounter any problems or bugs, please report an issue on our `GitHub repository <https://github.com/gabrielepaoletti/quakepro>`_, it will be resolved as soon as possible.
 - 📧 **E-mail**: For direct support, you can contact me at gabriele.paoletti@uniroma1.it.
 
 Thank you for using QUAKEPRO! We are continually working to improve this tool, and your feedback is invaluable.
