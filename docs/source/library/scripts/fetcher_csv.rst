@@ -54,19 +54,22 @@ QUAKEPRO Fetcher (QPF) - CSV
     :Returns:
         This script generates a directory (in the path from which this script was launched) named after the seismic station from which the data was downloaded. Inside this directory, you will find two primary files:
 
-            - **Attributes CSV file**, that contains metadata for each seismic event/waveform and the station itself.
-            - **HDF5 waveforms file**, that stores all the waveforms as ``numpy.ndarray`` objects. The file is structured into datasets, with each dataset named according to the trace name.
+    .. raw:: html
+        <br>
+
+    - **Attributes CSV file**, that contains metadata for each seismic event/waveform and the station itself.
+    - **HDF5 waveforms file**, that stores all the waveforms as ``numpy.ndarray`` objects. The file is structured into datasets, with each dataset named according to the trace name.
         
-        .. code-block:: text
+    .. code-block:: text
 
-            /<station_name>/
-            ├── <station_name>_attributes.csv
-            └── <station_name>_waveforms.hdf5
+        /<station_name>/
+        ├── <station_name>_attributes.csv
+        └── <station_name>_waveforms.hdf5
 
-        The datasets in the HDF5 file are linked to the metadata in the CSV file through the ``trace_name`` column. This allows users to easily pair waveform data with their corresponding event and station metadata.
+    The datasets in the HDF5 file are linked to the metadata in the CSV file through the ``trace_name`` column. This allows users to easily pair waveform data with their corresponding event and station metadata.
 
-        .. warning::
-            It is important not to rename these files to ensure proper integration with `processing <https://quakepro.readthedocs.io/en/latest/documentation/modules/processing.html>`_ and `visualization <https://quakepro.readthedocs.io/en/latest/documentation/modules/plot.html>`_ modules. You can safely rename the directory, but changing the filenames inside it may disrupt the functionality of other functions and methods.
+    .. warning::
+        It is important not to rename these files to ensure proper integration with `processing <https://quakepro.readthedocs.io/en/latest/documentation/modules/processing.html>`_ and `visualization <https://quakepro.readthedocs.io/en/latest/documentation/modules/plot.html>`_ modules. You can safely rename the directory, but changing the filenames inside it may disrupt the functionality of other functions and methods.
 
 
         

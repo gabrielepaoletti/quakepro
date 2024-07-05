@@ -28,3 +28,9 @@ This section provides a comprehensive overview of key features and functionaliti
    :link-type: doc
 
    Dive into practical examples and detailed guides to effectively utilize QUAKEPRO.
+
+.. card:: :material-regular:`help;1.7em` FAQ
+   :link: user_guide/faq
+   :link-type: doc
+
+   Find answers to common questions and solutions to frequent issues.

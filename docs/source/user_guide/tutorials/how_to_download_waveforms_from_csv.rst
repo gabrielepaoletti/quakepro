@@ -44,8 +44,11 @@ This command will download 30-second-windowed (10 seconds before and 20 seconds 
 
 When the software is running, progress bars will appear, indicating the remaining time for the operation to complete. Upon completion, a folder will be created in the directory where the script was executed, named after the station, containing two primary files:
 
-    - **Attributes CSV file**, that contains metadata for each seismic event/waveform and the station itself.
-    - **HDF5 waveforms file**, that stores all the waveforms as ``numpy.ndarray`` objects. The file is structured into datasets, with each dataset named according to the trace name.
+.. raw:: html
+    <br>
+
+- **Attributes CSV file**, that contains metadata for each seismic event/waveform and the station itself.
+- **HDF5 waveforms file**, that stores all the waveforms as ``numpy.ndarray`` objects. The file is structured into datasets, with each dataset named according to the trace name.
 
 .. code-block:: text
 
