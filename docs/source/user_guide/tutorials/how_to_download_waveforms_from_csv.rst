@@ -3,7 +3,7 @@ How to download waveforms from a CSV earthquake catalog
 
 In this tutorial, you will learn how to efficiently download seismic waveforms using QUAKEPRO from a CSV-formatted earthquake catalog. This guide is designed to assist you in preparing your CSV file correctly and using it to retrieve the necessary waveform data seamlessly.
 
-CSV Catalog Formatting
+CSV catalog formatting
 ----------------------
 
 To ensure that the download software provided by QUAKEPRO functions correctly, it is necessary to format the earthquake catalog CSV file properly. The CSV file should contain the following columns, named exactly as specified (pay attention to capitalization):
