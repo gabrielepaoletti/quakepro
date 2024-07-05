@@ -1,5 +1,5 @@
 Installation
-======================================
+============
 
 This document provides detailed instructions for installing the QUAKEPRO package. The installation process has been streamlined to ensure compatibility and ease of integration into various scientific computing environments.
 

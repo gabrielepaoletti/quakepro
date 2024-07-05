@@ -1,5 +1,5 @@
 QUAKEPRO Fetcher (QPF) - CSV
-===============================
+============================
 
 .. option:: $ qpf-csv <subcommand> [options]
 
