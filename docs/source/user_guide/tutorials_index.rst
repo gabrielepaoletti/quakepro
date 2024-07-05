@@ -6,4 +6,4 @@ Explore our tutorials to discover how QUAKEPRO can enhance your seismological st
 .. toctree::
    :maxdepth: 2
    
-   user_guide/tutorials/how_to_download_waveforms_from_csv
+   tutorials/how_to_download_waveforms_from_csv
