@@ -19,7 +19,7 @@ Hope these tutorials have provided a solid foundation for using QUAKEPRO to mana
 
 If you encounter any issues or have further questions, you can reach out for support through the following channels:
 
-- `GitHub <https://github.com/gabrielepaoletti/quakepro>`_: If you encounter any problems or bugs, please report an issue on our GitHub repository [link].
-- **E-Mail**: For direct support, you can contact me at gabriele.paoletti@uniroma1.it
+- `GitHub <https://github.com/gabrielepaoletti/quakepro>`_: If you encounter any problems or bugs, please report an issue on our GitHub repository.
+- **E-Mail**: For direct support, you can contact me at  <mailto:gabriele.paoletti@uniroma1.it>`_.
 
 Thank you for using QUAKEPRO! We are continually working to improve this tool, and your feedback is invaluable.
