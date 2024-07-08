@@ -16,7 +16,7 @@ You can download the waveforms by opening the command prompt and running the dow
     In this command, wildcards are used to specify multiple options conveniently. For example, ``EH*`` indicates that all channels starting with ``EH`` should be downloaded. This flexibility allows you to customize the command to suit your specific needs.
 
 .. note::
-    For the parameters --trace_len and --interval, you must use Pandas time strings. For more information, refer to the `https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#period-aliases>`_.
+    For the parameters --trace_len and --interval, you must use Pandas time strings. For more information, refer to the `Pandas documentation <https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#period-aliases>`_.
 
 This command will download 30-second three-channel waveforms every 12 hours from the MMO1 seismic station, covering the period from January 1, 2016, to January 1, 2017.
 
