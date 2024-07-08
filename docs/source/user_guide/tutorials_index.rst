@@ -10,6 +10,7 @@ Here, you will find a comprehensive collection of step-by-step guides designed t
    :caption: Content
    
    tutorials/how_to_download_waveforms_from_csv
+   tutorials/how_to_download_waveforms_interval
 
 Further exploration and support
 -------------------------------
