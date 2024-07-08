@@ -19,7 +19,7 @@ QUAKEPRO integrates data retrieval, processing, and visualization into a cohesiv
 
 ## 📋 Documentation
 
-For a comprehensive guide on how to install, configure, and use this module, please refer to the [official documentation](https://quakepro.readthedocs.io/en/latest). The documentation provides detailed instructions on setting up the module, as well as examples and best practices to help you get the most out of your experience.
+For a comprehensive guide on how to install, configure, and use this module, please refer to the [QUAKEPRO official documentation](https://quakepro.readthedocs.io/en/latest). The documentation provides detailed instructions on setting up the module, as well as examples and best practices to help you get the most out of your experience.
 
 ## 🤝 Contributing
 
