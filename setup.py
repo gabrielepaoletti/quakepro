@@ -21,7 +21,8 @@ config = {
     'long_description_content_type': 'text/markdown',
     'entry_points': {
         'console_scripts': [
-            'qpf-csv=scripts.fetcher_csv:main'
+            'qpf-csv=scripts.fetcher_csv:main',
+            'qpf-int=scripts.fetcher_int:main'
         ]
     }
 }

@@ -1,7 +1,9 @@
 QUAKEPRO Fetchers (QPFs)
 ========================
 
-Executable command-line scripts that enable the downloading of seismic waveforms from FDSN web services in various ways. Each fetcher script offers a unique method for retrieving data, thereby providing flexibility and customization for seismic data acquisition.
+Executable command-line scripts that enable the downloading of seismic waveforms from FDSN web services in various ways. 
+
+Each fetcher script offers a unique method for retrieving data, thereby providing flexibility and customization for seismic data acquisition.
 
 CSV Fetcher
 -----------
