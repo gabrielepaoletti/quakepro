@@ -1,6 +1,11 @@
 QUAKEPRO Fetchers (QPFs)
 ========================
 
+Executable command-line scripts that enable the downloading of seismic waveforms from FDSN web services in various ways. Each fetcher script offers a unique method for retrieving data, thereby providing flexibility and customization for seismic data acquisition.
+
+CSV Fetcher
+-----------
+
 .. option:: $ qpf-csv <subcommand> [options]
 
     Download seismic waveforms using FDSN web services from a pre-built CSV earthquake catalog.
@@ -70,6 +75,9 @@ QUAKEPRO Fetchers (QPFs)
 
         .. warning::
             It is important not to rename these files to ensure proper integration with `processing <https://quakepro.readthedocs.io/en/latest/documentation/modules/processing.html>`_ and `visualization <https://quakepro.readthedocs.io/en/latest/documentation/modules/plot.html>`_ modules. You can safely rename the directory, but changing the filenames inside it may disrupt the functionality of other functions and methods.
+
+Interval Fetcher
+----------------
 
 .. option:: $ qpf-int <subcommand> [options]
 

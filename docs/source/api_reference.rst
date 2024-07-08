@@ -38,10 +38,10 @@ Provide a comprehensive set of Python tools primarily focused on signal processi
 Executable scripts
 ------------------
 
-Include command-line interfaces (CLI) designed for the streamlined downloading of seismic waveforms and pre-processing tasks, offering an efficient and user-friendly approach to handle large datasets and prepare them for subsequent analysis.
+Include command-line interfaces (CLI) designed for speed up tasks, offering an efficient and user-friendly approach to handle large datasets and prepare them for subsequent analysis.
 
-.. card:: :material-outlined:`download;1.7em` QPF-CSV
-   :link: library/scripts/fetcher_csv
+.. card:: :material-outlined:`download;1.7em` Fetchers
+   :link: library/scripts/fetchers
    :link-type: doc
 
-   Fetch seismic waveforms from pre-built CSV earthquake catalogs.
+   Scripts for downloading waveforms, each offering a unique method of retrieval.
