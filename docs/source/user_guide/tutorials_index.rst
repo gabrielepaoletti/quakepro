@@ -8,13 +8,13 @@ Here, you will find a comprehensive collection of step-by-step guides designed t
 Fetchers
 --------
 
-.. card:: :material-outlined:`download;1.7em` QPF-CSV
+.. card:: :material-outlined:`download;1.7em` CSV Fetcher (QPF-CSV)
    :link: tutorials/how_to_download_waveforms_from_csv
    :link-type: doc
 
    How to download waveforms from a pre-built CSV earthquake catalog.
 
-.. card:: :material-outlined:`download;1.7em` QPF-INT
+.. card:: :material-outlined:`download;1.7em` Interval Fetcher (QPF-INT)
    :link: tutorials/how_to_download_waveforms_interval
    :link-type: doc
 
