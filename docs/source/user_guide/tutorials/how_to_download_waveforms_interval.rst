@@ -10,7 +10,7 @@ You can download the waveforms by opening the command prompt and running the dow
 
 .. code-block:: bash
 
-    qpf-csv -p INGV -n IV -s MMO1 -c EH* -l * --start_time 2016-01-01 --end_time 2017-01-01 --trace_len 30s --interval 12H
+    qpf-int -p INGV -n IV -s MMO1 -c EH* -l * --start_time 2016-01-01 --end_time 2017-01-01 --trace_len 30s --interval 12H
 
 .. note::
     In this command, wildcards are used to specify multiple options conveniently. For example, ``EH*`` indicates that all channels starting with ``EH`` should be downloaded. This flexibility allows you to customize the command to suit your specific needs.
