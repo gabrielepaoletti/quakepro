@@ -1,11 +1,3 @@
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-   :caption: Tutorials
-   
-   tutorials/how_to_download_waveforms_from_csv
-   tutorials/how_to_download_waveforms_interval
-
 Tutorials
 =========
 
