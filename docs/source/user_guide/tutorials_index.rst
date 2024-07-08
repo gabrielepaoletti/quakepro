@@ -8,6 +8,8 @@ Here, you will find a comprehensive collection of step-by-step guides designed t
 Fetchers
 --------
 
+Executable command-line scripts that enable the downloading of seismic waveforms from FDSN web services in various ways.
+
 .. card:: :material-outlined:`download;1.7em` CSV Fetcher (QPF-CSV)
    :link: tutorials/how_to_download_waveforms_from_csv
    :link-type: doc
