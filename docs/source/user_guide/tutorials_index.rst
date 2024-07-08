@@ -1,3 +1,11 @@
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   :caption: Tutorials
+   
+   tutorials/how_to_download_waveforms_from_csv
+   tutorials/how_to_download_waveforms_interval
+
 Tutorials
 =========
 
@@ -5,12 +13,20 @@ Explore our tutorials to discover how QUAKEPRO can enhance your seismological st
 
 Here, you will find a comprehensive collection of step-by-step guides designed to help you harness the full potential of QUAKEPRO for your seismological research.
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Content
-   
-   tutorials/how_to_download_waveforms_from_csv
-   tutorials/how_to_download_waveforms_interval
+Fetchers
+--------
+
+.. card:: :material-outlined:`download;1.7em` QPF-CSV
+   :link: tutorials/how_to_download_waveforms_from_csv
+   :link-type: doc
+
+   How to download waveforms from a pre-built CSV earthquake catalog.
+
+.. card:: :material-outlined:`download;1.7em` QPF-INT
+   :link: tutorials/how_to_download_waveforms_interval
+   :link-type: doc
+
+   How to download waveforms for custom time intervals, with custom trace length and sampling frequency.
 
 Further exploration and support
 -------------------------------
