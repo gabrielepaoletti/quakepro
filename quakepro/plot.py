@@ -146,8 +146,8 @@ class Plotter(_PlotConfig):
             _, axs = plt.subplots(3, 1, figsize=(10, 5), sharex=True, sharey=True)
             signals = self.wavs[trace_name][:]
 
-            for ch_idx, signal in enumerate(signals, start=1):
-                axs[ch_idx].plot(signal, c='k', lw=0.75, label=f'CH{ch_idx}')
+            for ch_idx, signal in enumerate(signals):
+                axs[ch_idx].plot(signal, c='k', lw=0.75, label=f'CH{ch_idx + 1}')
                 axs[ch_idx].set_ylabel('Amplitude')
                 axs[ch_idx].set_xlim(0, len(signal))
                 axs[ch_idx].legend(loc='upper right')
@@ -211,7 +211,7 @@ class Plotter(_PlotConfig):
         for trace_name in trace_names:
             signals = self.wavs[trace_name][:]
             
-            for ch_idx, signal in enumerate(signals, start=1):
+            for ch_idx, signal in enumerate(signals):
                 # Perform Fourier Transform
                 ft = np.fft.fft(signal)
                 freq = np.fft.fftfreq(signal.size, d=1/self.attr[self.attr.trace_name == trace_name].rec_sampling_rate_hz.item())
@@ -231,7 +231,7 @@ class Plotter(_PlotConfig):
                 # Plot the waveform
                 axs[0].set_title(f'Event ID-{self.attr[self.attr.trace_name == trace_name].src_id.item()}')
                 if plot_waveform:
-                    axs[0].plot(signal, linewidth=0.75, color='k', label=f'CH{ch_idx}')
+                    axs[0].plot(signal, linewidth=0.75, color='k', label=f'CH{ch_idx + 1}')
                     axs[0].set_xlabel('Samples [#]')
                     axs[0].set_ylabel('Amplitude')
                     axs[0].set_xlim(0, len(signal))
@@ -319,7 +319,7 @@ class Plotter(_PlotConfig):
         for trace_name in trace_names:
             signals = self.wavs[trace_name][:]
             
-            for ch_idx, signal in enumerate(signals, start=1):
+            for ch_idx, signal in enumerate(signals):
 
                 signal -= np.mean(signal)
                 if noverlap is None:
@@ -341,7 +341,7 @@ class Plotter(_PlotConfig):
                 if plot_waveform:
                     ax1 = fig.add_subplot(gs[0, 0])
                     time = np.arange(signal.size) / sampling_rate
-                    ax1.plot(time, signal, color='k', linewidth=0.75, label=f'CH{ch_idx}')
+                    ax1.plot(time, signal, color='k', linewidth=0.75, label=f'CH{ch_idx + 1}')
                     ax1.set_title(f'Event ID-{self.attr[self.attr.trace_name == trace_name].src_id.item()}')
                     ax1.set_ylabel('Amplitude')
                     ax1.grid(True, axis='x')

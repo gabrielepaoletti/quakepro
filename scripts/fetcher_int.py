@@ -10,24 +10,21 @@
 import h5py
 import argparse
 
-import numpy as np
 import pandas as pd
 
-from tqdm.auto import tqdm
-from obspy.taup import TauPyModel
 from obspy.clients.fdsn import Client
 
 from _utils._mixins import _InitMixin, _FetcherMixin
 from _utils._station import _Station
 
 # --------------------------------------------------------------------------------------------------------
-# DEFINING CLASSE AND METHODS
+# DEFINING CLASSES AND METHODS
 # --------------------------------------------------------------------------------------------------------
 
-class CSVFetcher(_InitMixin, _FetcherMixin):
-    def __init__(self, client: str, network: str, station: str, location: str, channel: str, catalog_path: str, model: str, time_before_p: float, time_after_p: float, detrend: str=None, resample: float=None, remove_response: str =None) -> None:
+class INTFetcher(_InitMixin, _FetcherMixin):
+    def __init__(self, client: str, network: str, station: str, location: str, channel: str, start_date: str, end_date: str, trace_len: float, interval: str, detrend: str=None, resample: float=None, remove_response: str =None) -> None:
         """
-        Initialize the CSVFetcher for downloading seismic waveforms.
+        Initialize the INTCSVFetcher for downloading seismic waveforms.
 
         Parameters
         ----------
@@ -46,17 +43,23 @@ class CSVFetcher(_InitMixin, _FetcherMixin):
         channel : str
             Channel code(s) specifying the types of data to retrieve. Channels are typically identified by three characters.
 
-        model : str
-            Earth velocity model for travel time calculations.
+        start_date : str
+             The start date for the data retrieval period in ``'YYYY-MM-DD'`` format. This indicates the beginning of the time span for which data will be retrieved.
 
-        time_before_p : float
-            Time in seconds before P-wave arrival to start the trace.
+        end_date : str
+            The end date for the data retrieval period in ``'YYYY-MM-DD'`` format. This indicates the end of the time span for which data will be retrieved.
 
-        time_after_p : float
-            Time in seconds after P-wave arrival to end the trace.
+        trace_len : float
+            Length of the trace to be downlaoded. This specifies the duration of each individual waveform segment to be retrieved.
 
-        catalog_path : str
-            Path to the earthquake catalog CSV file.
+            .. note::
+                This parameter must be passed as a Pandas frequency string (e.g., ``'1T'`` for 1 minute, ``'1D'`` for 1 day).
+
+        interval : str
+            Interval between each data point. This determines how often the waveform data should be sampled within the specified date range.
+
+            .. note::
+                This parameter must be passed as a Pandas frequency string (e.g., ``'1T'`` for 1 minute, ``'1D'`` for 1 day).
 
         detrend : str, optional
             Method to be used for detrending the data. Default is ``'linear'``.
@@ -76,74 +79,36 @@ class CSVFetcher(_InitMixin, _FetcherMixin):
         self.station = _Station(client, network, station)
         self.location = location
         self.channel = channel
-        self.time_before_p = time_before_p
-        self.time_after_p = time_after_p
-        self.trace_len = time_before_p + time_after_p
-        self.catalog = self._load_catalog(catalog_path)
-        self.model = TauPyModel(model)
+        self.start_date = start_date
+        self.end_date = end_date
+        self.trace_len = trace_len
+        self.interval = interval
+        self.catalog = self._generate_catalog()
         self.detrend = detrend
         self.resample = resample
         self.remove_response = remove_response
-
+        
         self._dir_path = self._create_directory()
         self._attr_list = []
-        
-    def _load_catalog(self, path: str) -> pd.DataFrame:
-        """
-        Load a seismic event catalog from a CSV file.
 
-        Parameters
-        ----------
-        path : str
-            Path to the catalog CSV file.
+    def _generate_catalog(self) -> pd.DataFrame:
+        """
+        Generate a ``pd.DataFrame`` with a column ``'time'`` containing datetimes at specified intervals.
 
         Returns
         -------
         pd.DataFrame
-            A DataFrame containing the loaded catalog.
+            DataFrame with a ``'time'`` column.
         """
-        catalog = pd.read_csv(path)
-        catalog.time = pd.to_datetime(catalog.time)
-        return catalog
+        date_range = pd.date_range(start=self.start_date, end=self.end_date, freq=self.interval)
+        ids = pd.Series(range(100000000, 100000000 + len(date_range)))
+        df = pd.DataFrame({'id': ids, 'trace_start_time': date_range})
+        df['trace_end_time'] = df['trace_start_time'] + pd.to_timedelta(self.trace_len)
+        return df
     
-    def _calculate_p_travel_times(self) -> None:
-        """
-        Calculate the P-wave travel times for all events in the catalog using a standard velocity model.
-
-        Returns
-        -------
-        None
-        """
-        self.catalog['p_travel_time_s'] = None
-        for idx, event in tqdm(self.catalog.iterrows(), total=self.catalog.shape[0], desc='Calculating P-wave travel times'):
-            travel_times = self.model.get_travel_times_geo(
-                source_depth_in_km=event.depth,
-                source_latitude_in_deg=event.lat,
-                source_longitude_in_deg=event.lon,
-                receiver_latitude_in_deg=self.station.latitude,
-                receiver_longitude_in_deg=self.station.longitude
-            )
-            if travel_times:
-                self.catalog.at[idx, 'p_travel_time_s'] = round(travel_times[0].time, 5)
-            else:
-                self.catalog.at[idx, 'p_travel_time_s'] = np.nan
-    
-    def _calculate_trace_times(self) -> None:
-        """
-        Calculate the start and end times for the waveform traces based on the P-wave travel times.
-
-        Returns
-        -------
-        None
-        """
-        origin_times = self.catalog.time
-        arrival_times = origin_times + pd.to_timedelta(self.catalog.p_travel_time_s, unit='seconds')
-        self.catalog['trace_start_time'] = arrival_times - pd.to_timedelta(self.time_before_p, unit='seconds')
-        self.catalog['trace_end_time'] = arrival_times + pd.to_timedelta(self.time_after_p, unit='seconds')
-
     def _generate_attributes(self, event: pd.Series, dataset: h5py.Dataset) -> dict:
         """
-        Generate event attributes specific to CSVFetcher.
+        Generate event attributes specific to INTFetcher.
 
         Parameters
         ----------
@@ -169,25 +134,7 @@ class CSVFetcher(_InitMixin, _FetcherMixin):
             'rec_elevation_m': self.station.elevation,
             'rec_sampling_rate_hz': self.station.sampling_rate,
             'src_id': event.id,
-            'src_origin_time': event.time,
-            'src_latitude_deg': event.lon,
-            'src_longitude_deg': event.lat,
-            'src_depth_km': event.depth,
-            'src_magnitude': event.magnitude,
-            'p_travel_sec': event.p_travel_time_s
         }
-    
-    def create_waveform_catalog(self) -> None:
-        """
-        Main method to create a waveform catalog by processing each event in the seismic catalog.
-
-        Returns
-        -------
-        None
-        """
-        self._calculate_p_travel_times()
-        self._calculate_trace_times()
-        self._create_catalog()
 
 # --------------------------------------------------------------------------------------------------------
 # DEFINING FUNCTIONS
@@ -227,20 +174,20 @@ def parse_arguments() -> argparse.Namespace:
         help='Channel code(s) specifying the types of data to retrieve. Channels are typically identified by three characters.'
     )
     parser.add_argument(
-        '-m', '--model', type=str, required=True,
-        help='Earth velocity model for travel time calculations.'
+        '--start_date', type=str, required=True,
+        help='The start date for the data retrieval period in YYYY-MM-DD format. This indicates the beginning of the time span for which data will be retrieved.'
     )
     parser.add_argument(
-        '--time_before_p', type=float, required=True,
-        help='Time in seconds before P-wave arrival to start the trace.'
+        '--end_date', type=str, required=True,
+        help='The end date for the data retrieval period in YYYY-MM-DD format. This indicates the end of the time span for which data will be retrieved.'
     )
     parser.add_argument(
-        '--time_after_p', type=float, required=True,
-        help='Time in seconds after P-wave arrival to end the trace.'
+        '--trace_len', type=str, required=True,
+        help='Length of the trace to be downlaoded. This specifies the duration of each individual waveform segment to be retrieved.'
     )
     parser.add_argument(
-        '--catalog_path', type=str, required=True,
-        help='Path to the earthquake catalog CSV file.'
+        '--interval', type=str, required=True,
+        help='Interval between each data point. This determines how often the waveform data should be sampled within the specified date range.'
     )
 
     # Optional arguments
@@ -260,6 +207,7 @@ def parse_arguments() -> argparse.Namespace:
     )
 
     return parser.parse_args()
+    
 
 def main() -> None:
     """
@@ -270,22 +218,22 @@ def main() -> None:
     None
     """
     args = parse_arguments()
-    fetcher = CSVFetcher(
+    fetcher = INTFetcher(
         client=args.client,
         network=args.network,
         station=args.station,
         location=args.location,
         channel=args.channel,
-        catalog_path=args.catalog_path,
-        model=args.model,
-        time_before_p=args.time_before_p,
-        time_after_p=args.time_after_p,
+        start_date=args.start_date,
+        end_date=args.end_date,
+        trace_len=args.trace_len,
+        interval=args.interval,
         detrend=args.detrend,
         resample=args.resample,
-        remove_response=args.remove_response,
+        remove_response=args.remove_response
     )
 
-    fetcher.create_waveform_catalog()
+    fetcher._create_catalog()
 
 # --------------------------------------------------------------------------------------------------------
 # MAIN EXECUTION
