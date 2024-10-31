@@ -1,26 +1,6 @@
-Tutorials
-=========
+Getting started
+===============
 
-Explore our tutorials to discover how QUAKEPRO can enhance your seismological studies, making complex tasks more manageable and your research more productive.
-
-Here, you will find a comprehensive collection of step-by-step guides designed to help you harness the full potential of QUAKEPRO for your seismological research.
-
-Fetchers
---------
-
-Executable command-line scripts that enable the downloading of seismic waveforms from FDSN web services in various ways.
-
-.. card:: :material-outlined:`download;1.7em` CSV Fetcher (QPF-CSV)
-   :link: tutorials/how_to_download_waveforms_from_csv
-   :link-type: doc
-
-   How to download waveforms from a pre-built CSV earthquake catalog.
-
-.. card:: :material-outlined:`download;1.7em` Interval Fetcher (QPF-INT)
-   :link: tutorials/how_to_download_waveforms_interval
-   :link-type: doc
-
-   How to download waveforms for custom time intervals, with custom trace length and sampling frequency.
 
 Further exploration and support
 -------------------------------

@@ -4,10 +4,10 @@ API Reference
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: Modules
+   :caption: Components
    
-   library/modules/processing
-   library/modules/plot
+   library/components/waveform
+   library/components/dataset
 
 .. toctree::
    :maxdepth: 1
@@ -18,22 +18,31 @@ API Reference
 
 This reference manual offers detailed explanations of the functions, modules, and objects contained within QUAKEPRO, outlining their purposes and functionalities. To learn how to apply QUAKEPRO, please refer to the `tutorial page <https://quakepro.readthedocs.io/en/latest/user_guide/tutorials.html>`_.
 
-Modules
--------
-Provide a comprehensive set of Python tools primarily focused on signal processing and visualization, facilitating in-depth analysis and interpretation of seismic data through customizable and efficient code implementations.
+Core
+----
+The primary interface for interacting with seismic waveform data, providing essential functions for data import and basic management.
 
+.. card:: :material-outlined:`hub;1.7em` Processing
+   :link: library/core
+   :link-type: doc
+
+   Provides essential functions for importing and organizing seismic datasets.
+
+Components
+----------
+Defines the core objects of the library, encapsulating both individual seismic waveforms and collections of waveforms. These objects are foundational for handling and analyzing seismic data in a structured and efficient way.
 
 .. card:: :material-outlined:`rss_feed;1.7em` Processing
-   :link: library/modules/processing
+   :link: library/components/waveform
    :link-type: doc
 
-   Process waveform data to tailor and refine seismic signal characteristics for detailed analysis.
+   Encapsulates a seismic waveform, including data and relevant metadata.
 
-.. card:: :material-outlined:`image;1.7em` Visualization
-   :link: library/modules/plot
+.. card:: :material-outlined:`dataset;1.7em` Processing
+   :link: library/components/dataset
    :link-type: doc
 
-   Offer tools for the effective visualization of seismic waveforms and their features.
+   Provides batch management and processing capabilities for waveform collections.
 
 Executable scripts
 ------------------

@@ -10,13 +10,13 @@ sphinx:
 
 # Define the version of Python
 python:
-  version: 3.9
+  version: 3.11
 
 # Define how your project should be installed
 build:
   os: "ubuntu-20.04"
   tools:
-    python: "3.9"
+    python: "3.11"
 
 # Define how to install your project dependencies
 python:

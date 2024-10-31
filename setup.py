@@ -11,7 +11,7 @@ config = {
     'download_url': 'https://github.com/gabrielepaoletti/quakepro',
     'author_email': 'gabriele.paoletti@uniroma1.it',
     'version': '0.1.0',
-    'python_requires': '>=3.9',
+    'python_requires': '>=3.11',
     'install_requires': ['h5py', 'matplotlib', 'numpy', 'obspy', 'pandas', 'scipy', 'typing', 'tqdm'],
     'packages': find_packages(),
     'name': 'quakepro',
