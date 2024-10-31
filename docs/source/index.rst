@@ -1,5 +1,5 @@
-QUAKEPRO: earthQUAKE Processing and Retrieval Operations
---------------------------------------------------------
+Welcome to QuakePro!
+--------------------
 
 .. toctree::
    :maxdepth: 1

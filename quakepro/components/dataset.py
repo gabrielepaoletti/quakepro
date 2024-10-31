@@ -20,8 +20,6 @@ class WaveformDataset:
     ----------
     waveforms : list[Waveform]
         List of Waveform objects with data and attributes.
-    transformations : list[str]
-        List of transformations applied to the dataset.
     """
 
     def __init__(self, wavs: h5py.File, attrs: pd.DataFrame):

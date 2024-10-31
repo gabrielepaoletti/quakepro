@@ -21,8 +21,6 @@ class Waveform:
     ----------
     data : np.ndarray
         The seismic waveform data.
-    _plotter : WaveformPlotter
-        An instance of WaveformPlotter for visualizing the waveform.
     """
 
     def __init__(self, data: np.ndarray, attrs: pd.Series, trans: str = None):

@@ -22,7 +22,7 @@ Core
 ----
 The primary interface for interacting with seismic waveform data, providing essential functions for data import and basic management.
 
-.. card:: :material-outlined:`hub;1.7em` Processing
+.. card:: :material-outlined:`hub;1.7em` Core
    :link: library/core
    :link-type: doc
 
@@ -32,13 +32,13 @@ Components
 ----------
 Defines the core objects of the library, encapsulating both individual seismic waveforms and collections of waveforms. These objects are foundational for handling and analyzing seismic data in a structured and efficient way.
 
-.. card:: :material-outlined:`rss_feed;1.7em` Processing
+.. card:: :material-outlined:`rss_feed;1.7em` Waveform
    :link: library/components/waveform
    :link-type: doc
 
    Encapsulates a seismic waveform, including data and relevant metadata.
 
-.. card:: :material-outlined:`dataset;1.7em` Processing
+.. card:: :material-outlined:`dataset;1.7em` Dataset
    :link: library/components/dataset
    :link-type: doc
 
