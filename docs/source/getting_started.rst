@@ -23,7 +23,7 @@ This section provides a comprehensive overview of key features and functionaliti
 
    Follow step-by-step instructions to easily set up the toolkit on your system and get started.
 
-.. card:: :material-regular:`draw;1.7em` Tutorials
+.. card:: :material-regular:`draw;1.7em` Getting started
    :link: user_guide/getting_started
    :link-type: doc
 
